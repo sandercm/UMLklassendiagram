@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Controller.class" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/sample.fxml" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/sample.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Controller.java" afterPath="$PROJECT_DIR$/src/UMLloader/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +66,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state relative-caret-position="964">
+              <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -99,7 +100,34 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="725">
               <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#0#6886#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2115#2116#0" expanded="false" />
+                <element signature="e#2143#2144#0" expanded="false" />
+                <element signature="e#3528#3529#0" expanded="false" />
+                <element signature="e#3578#3579#0" expanded="false" />
+                <element signature="e#3623#3624#0" expanded="false" />
+                <element signature="e#3697#3698#0" expanded="false" />
+                <element signature="e#3912#3913#0" expanded="false" />
+                <element signature="e#4004#4005#0" expanded="false" />
+                <element signature="e#4073#4074#0" expanded="false" />
+                <element signature="e#4131#4132#0" expanded="false" />
+                <element signature="e#4200#4201#0" expanded="false" />
+                <element signature="e#4262#4263#0" expanded="false" />
+                <element signature="e#4564#4565#0" expanded="false" />
+                <element signature="e#4613#4614#0" expanded="false" />
+                <element signature="e#4657#4658#0" expanded="false" />
+                <element signature="e#4729#4730#0" expanded="false" />
+                <element signature="e#4941#4942#0" expanded="false" />
+                <element signature="e#5032#5033#0" expanded="false" />
+                <element signature="e#5101#5102#0" expanded="false" />
+                <element signature="e#5159#5160#0" expanded="false" />
+                <element signature="e#5228#5229#0" expanded="false" />
+                <element signature="e#5289#5290#0" expanded="false" />
+                <element signature="e#5984#5985#0" expanded="false" />
+                <element signature="e#6027#6028#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -767,7 +795,7 @@
       <workItem from="1490531639533" duration="299000" />
       <workItem from="1490532252038" duration="3969000" />
       <workItem from="1490551901108" duration="396000" />
-      <workItem from="1490558186241" duration="719000" />
+      <workItem from="1490558186241" duration="1367000" />
     </task>
     <task id="LOCAL-00001" summary="second test">
       <created>1490532927893</created>
@@ -797,11 +825,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490558902261</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed vbox placement">
+      <created>1490558907981</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1490558907982</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22002000" />
+    <option name="totallyTimeSpent" value="22650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1940" height="2110" extended-state="0" />
@@ -1271,7 +1306,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
           <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#6886#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2115#2116#0" expanded="false" />
+            <element signature="e#2143#2144#0" expanded="false" />
+            <element signature="e#3528#3529#0" expanded="false" />
+            <element signature="e#3578#3579#0" expanded="false" />
+            <element signature="e#3623#3624#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
+            <element signature="e#3912#3913#0" expanded="false" />
+            <element signature="e#4004#4005#0" expanded="false" />
+            <element signature="e#4073#4074#0" expanded="false" />
+            <element signature="e#4131#4132#0" expanded="false" />
+            <element signature="e#4200#4201#0" expanded="false" />
+            <element signature="e#4262#4263#0" expanded="false" />
+            <element signature="e#4564#4565#0" expanded="false" />
+            <element signature="e#4613#4614#0" expanded="false" />
+            <element signature="e#4657#4658#0" expanded="false" />
+            <element signature="e#4729#4730#0" expanded="false" />
+            <element signature="e#4941#4942#0" expanded="false" />
+            <element signature="e#5032#5033#0" expanded="false" />
+            <element signature="e#5101#5102#0" expanded="false" />
+            <element signature="e#5159#5160#0" expanded="false" />
+            <element signature="e#5228#5229#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5984#5985#0" expanded="false" />
+            <element signature="e#6027#6028#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1328,8 +1390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="964">
+          <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
           <folding />
         </state>
       </provider>

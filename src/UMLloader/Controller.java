@@ -41,20 +41,29 @@ public class Controller {
      * attributes no list of subclasses
      * relations no list of subclasses
      */
-    public void open(ActionEvent actionEvent) throws FileNotFoundException, JAXBException {
+    public void open(ActionEvent actionEvent){
         FileChooser chooser = new FileChooser();
         chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML files", "*.xml"));
         File file = chooser.showOpenDialog(borderpane.getScene().getWindow());
         Unmarshal un = new Unmarshal();
-        Diagram diagram = un.unmarshaller(file);
+        Diagram diagram = null;
+        try {
+            diagram = un.unmarshaller(file);
+        } catch (JAXBException e) {
+            System.out.println("JAXB, unmarshalling error");;
+        }
+        setBoxes(diagram);
+    }
+
+    private void setBoxes(Diagram diagram){
         for (int i = 0; i < diagram.getList().size(); i++){
             System.out.println(diagram.getList().get(i));
             VBox newBox = new VBox();
-            Label label = new Label("this is a test");
+            Label label = new Label("my boxes bitch");
             newBox.getChildren().add(label);
             anchorpane.getChildren().add(newBox);
-            anchorpane.setTopAnchor(newBox, (double)diagram.getList().get(i).getRow());
-            anchorpane.setLeftAnchor(newBox, (double)diagram.getList().get(i).getCol());
+            AnchorPane.setTopAnchor(newBox, (double)diagram.getList().get(i).getRow());
+            AnchorPane.setLeftAnchor(newBox, (double)diagram.getList().get(i).getCol());
         }
     }
 }
