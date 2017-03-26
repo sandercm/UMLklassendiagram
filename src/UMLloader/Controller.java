@@ -2,9 +2,11 @@ package UMLloader;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Box;
 import javafx.stage.FileChooser;
 
@@ -45,14 +47,14 @@ public class Controller {
         File file = chooser.showOpenDialog(borderpane.getScene().getWindow());
         Unmarshal un = new Unmarshal();
         Diagram diagram = un.unmarshaller(file);
-        List<Box> boxes = new ArrayList<>();
         for (int i = 0; i < diagram.getList().size(); i++){
             System.out.println(diagram.getList().get(i));
-            Box newBox = new Box();
-            newBox.setWidth((double)diagram.getList().get(i).getWidth());
-            newBox.setHeight(50);
-            boxes.add(newBox);
+            VBox newBox = new VBox();
+            Label label = new Label("this is a test");
+            newBox.getChildren().add(label);
+            anchorpane.getChildren().add(newBox);
+            anchorpane.setTopAnchor(newBox, (double)diagram.getList().get(i).getRow());
+            anchorpane.setLeftAnchor(newBox, (double)diagram.getList().get(i).getCol());
         }
-        anchorpane.getChildren().addAll(boxes);
     }
 }
