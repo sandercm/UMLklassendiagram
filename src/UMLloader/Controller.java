@@ -42,7 +42,7 @@ public class Controller {
         Unmarshal un = new Unmarshal();
         Diagram diagram = un.unmarshaller(file);
         for (int i = 0; i < diagram.getList().size(); i++){
-            System.out.println(diagram.getList().get(i).getRelations().get(0).toString());
+            System.out.println(diagram.getList().get(i));
         }
 
     }
