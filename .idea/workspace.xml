@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UMLloader/sample.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Controller.class" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Controller.java" afterPath="$PROJECT_DIR$/src/UMLloader/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/sample.fxml" afterPath="$PROJECT_DIR$/src/UMLloader/sample.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -770,7 +767,7 @@
       <workItem from="1490531639533" duration="299000" />
       <workItem from="1490532252038" duration="3969000" />
       <workItem from="1490551901108" duration="396000" />
-      <workItem from="1490558186241" duration="699000" />
+      <workItem from="1490558186241" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="second test">
       <created>1490532927893</created>
@@ -786,11 +783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490535966875</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed vbox placement">
+      <created>1490558898084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490558898084</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21982000" />
+    <option name="totallyTimeSpent" value="21996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1940" height="2110" extended-state="0" />
@@ -841,7 +845,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second test" />
     <MESSAGE value="created list of boxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="created list of boxes" />
+    <MESSAGE value="fixed vbox placement" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed vbox placement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
