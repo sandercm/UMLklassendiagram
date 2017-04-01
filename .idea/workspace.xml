@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/relation.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/relation.java" afterPath="$PROJECT_DIR$/src/UMLloader/Relation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Diagram.class" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Diagram.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Operation.class" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Operation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Unmarshal.class" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Unmarshal.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/circle.xml" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/circle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/sample.fxml" afterPath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Box.java" afterPath="$PROJECT_DIR$/src/UMLloader/Box.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Companion.java" afterPath="$PROJECT_DIR$/src/UMLloader/Companion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" afterPath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,21 +71,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="385">
+              <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2262#2263#0" expanded="true" />
-                <element signature="e#2310#2311#0" expanded="true" />
+                <element signature="e#2297#2298#0" expanded="true" />
+                <element signature="e#2345#2346#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VBoxModel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VBoxModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/VBoxModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
@@ -105,6 +96,18 @@
                 <element signature="e#1398#1399#0" expanded="true" />
                 <element signature="e#1466#1467#0" expanded="true" />
                 <element signature="e#1508#1509#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoxController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UMLloader/BoxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,16 +148,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2001">
               <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UMLloader/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -255,8 +248,8 @@
         <option value="$PROJECT_DIR$/src/UMLloader/UMLVBox.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/PageBox.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Main.java" />
-        <option value="$PROJECT_DIR$/src/UMLloader/Companion.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
+        <option value="$PROJECT_DIR$/src/UMLloader/Companion.java" />
       </list>
     </option>
   </component>
@@ -814,7 +807,7 @@
       <workItem from="1490558186241" duration="2754000" />
       <workItem from="1490702270905" duration="794000" />
       <workItem from="1490969390889" duration="530000" />
-      <workItem from="1490979262926" duration="14939000" />
+      <workItem from="1490979262926" duration="15110000" />
     </task>
     <task id="LOCAL-00001" summary="second test">
       <created>1490532927893</created>
@@ -907,11 +900,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491062266453</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed resizing problems with menubar">
+      <created>1491062904833</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491062904833</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40300000" />
+    <option name="totallyTimeSpent" value="40471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -978,7 +978,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1004,8 +1004,8 @@
           <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1102,8 +1102,8 @@
           <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1182,8 +1182,8 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1327,16 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/BoxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/PageBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1425,18 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/VBoxModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1447,6 +1425,28 @@
             <element signature="e#1398#1399#0" expanded="true" />
             <element signature="e#1466#1467#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/BoxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
           </folding>
         </state>
       </provider>

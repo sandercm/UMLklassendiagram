@@ -32,6 +32,7 @@ public class Companion {
     public void open(ActionEvent actionEvent) {
         unmarshaller = new Unmarshaller();
         diagram = unmarshaller.unmarshall();
+        //obsolete implementation:
         //BoxController boxController = new BoxController(diagram, anchorpane);
         //boxController.setBoxes();
         //model = new VBoxModel();
