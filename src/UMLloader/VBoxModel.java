@@ -22,8 +22,7 @@ public class VBoxModel implements Observable {
     private Float width;
 
 
-
-    public VBoxModel(Box box){
+    public VBoxModel(Box box) {
         this.name = box.getName();
         this.attributes = box.getAttributes();
         this.operations = box.getOperations();
@@ -33,11 +32,11 @@ public class VBoxModel implements Observable {
     }
 
 
-
     //getters and setters
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -107,19 +106,21 @@ public class VBoxModel implements Observable {
     /**
      * Lijst van geregistreerde luisteraars.
      */
-    public void setName(Box box){
+    public void setName(Box box) {
         this.name = box.getName();
     }
-    public void setAttributes(Box box){
+
+    public void setAttributes(Box box) {
         this.attributes = box.getAttributes();
     }
-    public void setOperations(Box box){
-        this.operations=box.getOperations();
+
+    public void setOperations(Box box) {
+        this.operations = box.getOperations();
     }
 
     private List<InvalidationListener> listenerList = new ArrayList<>();
 
-    private void fireInvalidationEvent () {
+    private void fireInvalidationEvent() {
         for (InvalidationListener listener : listenerList) {
             listener.invalidated(this);
         }

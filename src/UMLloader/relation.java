@@ -14,6 +14,7 @@ public class relation {
     public String getType() {
         return type;
     }
+
     @XmlAttribute
     public void setType(String type) {
         this.type = type;
@@ -22,6 +23,7 @@ public class relation {
     public String getWith() {
         return with;
     }
+
     @XmlAttribute
     public void setWith(String with) {
         this.with = with;

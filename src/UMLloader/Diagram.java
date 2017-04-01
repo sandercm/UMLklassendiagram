@@ -13,7 +13,9 @@ public class Diagram {
     private List<UMLloader.Box> box;
 
     @XmlElement(name = "Box")
-    public List<UMLloader.Box> getList(){ return box; }
+    public List<UMLloader.Box> getList() {
+        return box;
+    }
 
     public void setList(List<UMLloader.Box> box) {
         this.box = box;

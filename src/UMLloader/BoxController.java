@@ -12,10 +12,12 @@ import java.util.List;
 public class BoxController {
     public Diagram diagram;
     public AnchorPane anchorPane;
+
     public BoxController(Diagram diagram, AnchorPane anchorPane) {
         this.diagram = diagram;
         this.anchorPane = anchorPane;
     }
+
     public void setBoxes() {
         for (int i = 0; i < diagram.getList().size(); i++) {
             System.out.println(diagram.getList().get(i));
@@ -38,11 +40,13 @@ public class BoxController {
             addToPlane(newBox, (double) box.getRow(), (double) box.getCol());
         }
     }
+
     private void addToPlane(VBox vbox, Double row, Double col) {
         anchorPane.getChildren().addAll(vbox);
         AnchorPane.setTopAnchor(vbox, row);
         AnchorPane.setLeftAnchor(vbox, col);
     }
+
     private void setCSS(VBox vbox) {
         /**TODO
          * link this css to a file instaid of hardcoded in line
@@ -53,6 +57,7 @@ public class BoxController {
                 "-fx-border-width: 3;\n";
         vbox.setStyle(cssLayout);
     }
+
     private void setAttributes(List<Attribute> attributes, VBox vBox) {
         for (int i = 0; i < attributes.size(); i++) {
             Label label = new Label(attributes.get(i).getName());

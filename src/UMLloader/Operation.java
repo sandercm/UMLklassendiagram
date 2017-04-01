@@ -19,6 +19,7 @@ public class Operation {
     public String getScope() {
         return scope;
     }
+
     @XmlAttribute
     public void setScope(String scope) {
         this.scope = scope;
@@ -27,6 +28,7 @@ public class Operation {
     public String getVisibility() {
         return visibility;
     }
+
     @XmlAttribute
     public void setVisibility(String visibility) {
         this.visibility = visibility;
@@ -35,6 +37,7 @@ public class Operation {
     public String getName() {
         return name;
     }
+
     @XmlAttribute
     public void setName(String name) {
         this.name = name;
@@ -43,6 +46,7 @@ public class Operation {
     public String getType() {
         return type;
     }
+
     @XmlAttribute
     public void setType(String type) {
         this.type = type;
@@ -51,6 +55,7 @@ public class Operation {
     public List<Attribute> getAttributes() {
         return Attributes;
     }
+
     @XmlElement
     public void setAttributes(List<Attribute> Attributes) {
         this.Attributes = Attributes;

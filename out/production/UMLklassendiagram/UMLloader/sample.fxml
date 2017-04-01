@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -11,7 +12,7 @@
    <children>
       <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
          <top>
-            <MenuBar BorderPane.alignment="CENTER">
+            <MenuBar minHeight="-Infinity" BorderPane.alignment="TOP_CENTER">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -21,10 +22,13 @@
                   </items>
                 </Menu>
               </menus>
+               <BorderPane.margin>
+                  <Insets bottom="1.0" />
+               </BorderPane.margin>
             </MenuBar>
          </top>
          <center>
-            <AnchorPane fx:id = "anchorpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <AnchorPane fx:id="anchorpane" minHeight="0.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>
