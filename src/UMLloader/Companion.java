@@ -1,6 +1,8 @@
 package UMLloader;
 
 import javafx.application.Platform;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -8,27 +10,19 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
-import javax.smartcardio.ATR;
 import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Companion {
+public class Companion{
     public BorderPane borderpane;
     public AnchorPane anchorpane;
+    public VBoxModel model;
+    private Unmarshaller unmarshaller;
+    private Diagram diagram;
 
-    public void closeProgram(ActionEvent actionEvent) {
-        Platform.exit();
-    }
-
-    public void closeImage(ActionEvent actionEvent) {
-        for (int i =0; i <anchorpane.getChildren().toArray().length; i++){
-
-            anchorpane.getChildren().remove(0, anchorpane.getChildren().toArray().length);
-        }
-    }
 
     /**
      * @param actionEvent
@@ -40,27 +34,37 @@ public class Companion {
      *                               attributes no list of subclasses
      *                               relations no list of subclasses
      */
-    public void open(ActionEvent actionEvent) throws FileNotFoundException {
-        FileChooser chooser = new FileChooser();
-        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML files", "*.xml"));
-        File file = chooser.showOpenDialog(borderpane.getScene().getWindow());
-        Unmarshal un = new Unmarshal();
-        //unmarshalling copypasta
-        Diagram diagram = null;
-        try {
-            diagram = un.unmarshaller(file);
-        } catch (JAXBException e) {
-            System.out.println("JAXB, unmarshalling error");
+
+    public void open(ActionEvent actionEvent){
+        unmarshaller = new Unmarshaller();
+        diagram = unmarshaller.unmarshall();
+        //BoxController boxController = new BoxController(diagram, anchorpane);
+        //boxController.setBoxes();
+        //model = new VBoxModel();
+        for (Box box:diagram.getList()
+                ) {
+            model = new VBoxModel(box);
+            PageBox newVbox = new PageBox();
+            newVbox.setModel(model);
+            newVbox.getChildren().add(new Label(model.getName()));
+            addToPlane(newVbox, (double)model.getRow(), (double)model.getCol());
         }
-        BoxController boxController = new BoxController(diagram, anchorpane);
-        boxController.setBoxes();
+    }
+    public void addToPlane(VBox vbox, Double row, Double col) {
+        anchorpane.getChildren().addAll(vbox);
+        AnchorPane.setTopAnchor(vbox, row);
+        AnchorPane.setLeftAnchor(vbox, col);
     }
 
-    /*TODO
-       * create the other objects and link them
-               * create the arrow
-               * create a border around the boxers
-               * create lines for the attributes
-     */
+
+    public void closeImage(ActionEvent actionEvent) {
+        for (int i =0; i <anchorpane.getChildren().toArray().length; i++){
+            anchorpane.getChildren().remove(0, anchorpane.getChildren().toArray().length);
+        }
+    }
+
+    public void closeProgram(ActionEvent actionEvent) {
+        Platform.exit();
+    }
 
 }

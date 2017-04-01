@@ -1,6 +1,8 @@
 package UMLloader;
 
 
+import javafx.beans.InvalidationListener;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
 /**
  * Created by sander on 15/03/17.
  */
-public class Box {
+public class Box{
 
     private String name;
     //distance to the top of the Box

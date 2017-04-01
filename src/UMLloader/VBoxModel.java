@@ -3,6 +3,7 @@ package UMLloader;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 
+import javax.management.relation.Relation;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,16 +15,29 @@ public class VBoxModel implements Observable {
     //boxes -> relations, attributes and operations
     private String name;
     private List<Attribute> attributes = null;
+    private List<Relation> relations = null;
     private List<Operation> operations = null;
     private Float row;
     private Float col;
     private Float width;
 
+
+
+    public VBoxModel(Box box){
+        this.name = box.getName();
+        this.attributes = box.getAttributes();
+        this.operations = box.getOperations();
+        this.row = box.getRow();
+        this.col = box.getCol();
+        this.width = box.getWidth();
+    }
+
+
+
     //getters and setters
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -38,6 +52,14 @@ public class VBoxModel implements Observable {
 
     public List<Operation> getOperations() {
         return operations;
+    }
+
+    public List<Relation> getRelations() {
+        return relations;
+    }
+
+    public void setRelations(List<Relation> relations) {
+        this.relations = relations;
     }
 
     public void setOperations(List<Operation> operations) {
