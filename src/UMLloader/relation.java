@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 public class relation {
     // gives the type of relation
     private String type;
-    // gives who the box is in a relation with
+    // gives who the Box is in a relation with
     private String with;
 
     public String getType() {

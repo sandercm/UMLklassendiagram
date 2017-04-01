@@ -19,23 +19,23 @@ public class BoxController {
     public void setBoxes() {
         for (int i = 0; i < diagram.getList().size(); i++) {
             System.out.println(diagram.getList().get(i));
-            box boxx = diagram.getList().get(i);
+            Box box = diagram.getList().get(i);
             //creats Vbox objectr
             VBox newBox = new VBox();
             //creates lavel for the Vbox
-            Label label = new Label(boxx.getName());
+            Label label = new Label(box.getName());
             //creates the label list with attributes
             //adds the label to the Vbox
             newBox.getChildren().add(label);
-            newBox.setPrefWidth((double) boxx.getWidth());
-            //gets the attributes for the box
-            List<Attribute> attributes = boxx.getAttributes();
-            if (boxx.getAttributes() != null) {
+            newBox.setPrefWidth((double) box.getWidth());
+            //gets the attributes for the Box
+            List<Attribute> attributes = box.getAttributes();
+            if (box.getAttributes() != null) {
                 setAttributes(attributes, newBox);
             }
             setCSS(newBox);
-            //adds the box to the anchorpane
-            addToPlane(newBox, (double) boxx.getRow(), (double) boxx.getCol());
+            //adds the Box to the anchorpane
+            addToPlane(newBox, (double) box.getRow(), (double) box.getCol());
         }
     }
     private void addToPlane(VBox vbox, Double row, Double col) {

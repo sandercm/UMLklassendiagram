@@ -10,12 +10,12 @@ import java.util.List;
 @XmlRootElement
 public class Diagram {
 
-    private List<box> box;
+    private List<UMLloader.Box> box;
 
-    @XmlElement(name = "box")
-    public List<box> getList(){ return box; }
+    @XmlElement(name = "Box")
+    public List<UMLloader.Box> getList(){ return box; }
 
-    public void setList(List<box> box) {
+    public void setList(List<UMLloader.Box> box) {
         this.box = box;
     }
 

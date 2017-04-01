@@ -1,6 +1,5 @@
 package UMLloader;
 
-import javafx.scene.shape.Box;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,14 +8,14 @@ import java.util.List;
 /**
  * Created by sander on 15/03/17.
  */
-public class box {
+public class Box {
 
     private String name;
-    //distance to the top of the box
+    //distance to the top of the Box
     private Float row;
-    //distance to the right of the box
+    //distance to the right of the Box
     private Float col;
-    //width of the box
+    //width of the Box
     private Float width;
     //list of relations to other boxes
     private List<UMLloader.relation> relations;
@@ -81,7 +80,7 @@ public class box {
 
     @Override
     public String toString() {
-        return "box{" +
+        return "Box{" +
                 "name='" + name + '\'' +
                 ", row=" + row +
                 ", col=" + col +
