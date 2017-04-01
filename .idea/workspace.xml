@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UMLloader/PageBox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UMLloader/Unmarshaller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Box.java" afterPath="$PROJECT_DIR$/src/UMLloader/Box.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Companion.java" afterPath="$PROJECT_DIR$/src/UMLloader/Companion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" afterPath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Main.java" afterPath="$PROJECT_DIR$/src/UMLloader/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/sample.fxml" afterPath="$PROJECT_DIR$/src/UMLloader/sample.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +76,8 @@
       <file leaf-file-name="Companion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -183,21 +181,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="circle.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UMLloader/circle.xml">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UMLloader/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UMLloader/Main.java">
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UMLloader/sample.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="504">
+              <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -289,6 +290,7 @@
         <option value="$PROJECT_DIR$/src/UMLloader/UMLVBox.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/PageBox.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
+        <option value="$PROJECT_DIR$/src/UMLloader/Main.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Companion.java" />
       </list>
     </option>
@@ -330,6 +332,16 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UMLklassendiagramGit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="UMLklassendiagramGit" />
@@ -837,7 +849,7 @@
       <workItem from="1490558186241" duration="2754000" />
       <workItem from="1490702270905" duration="794000" />
       <workItem from="1490969390889" duration="530000" />
-      <workItem from="1490979262926" duration="11791000" />
+      <workItem from="1490979262926" duration="13736000" />
     </task>
     <task id="LOCAL-00001" summary="second test">
       <created>1490532927893</created>
@@ -909,11 +921,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491055665748</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="create model for all the boxes and placed them into the view">
+      <created>1491059777696</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1491059777696</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37152000" />
+    <option name="totallyTimeSpent" value="39097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -974,7 +993,8 @@
     <MESSAGE value="second test" />
     <MESSAGE value="created list of boxes" />
     <MESSAGE value="fixed vbox placement" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed vbox placement" />
+    <MESSAGE value="create model for all the boxes and placed them into the view" />
+    <option name="LAST_COMMIT_MESSAGE" value="create model for all the boxes and placed them into the view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1279,17 +1299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="246" lean-forward="false" selection-start-line="9" selection-start-column="246" selection-end-line="9" selection-end-column="246" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1348,14 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/Diagram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1368,16 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1452,10 +1443,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding />
         </state>
       </provider>

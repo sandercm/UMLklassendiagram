@@ -5,6 +5,7 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -48,8 +49,10 @@ public class Companion{
             newVbox.setModel(model);
             newVbox.getChildren().add(new Label(model.getName()));
             addToPlane(newVbox, (double)model.getRow(), (double)model.getCol());
+            //fix anchorpane covering menubar
         }
     }
+
     public void addToPlane(VBox vbox, Double row, Double col) {
         anchorpane.getChildren().addAll(vbox);
         AnchorPane.setTopAnchor(vbox, row);
