@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by sander on 15/03/17.
  */
-public class box{
+public class box {
 
     private String name;
     //distance to the top of the box

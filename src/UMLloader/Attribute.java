@@ -12,6 +12,15 @@ public class Attribute {
     private String name;
     private String type;
 
+    @Override
+    public String toString() {
+        return "Attribute{" +
+                "scope='" + scope + '\'' +
+                ", visibility='" + visibility + '\'' +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 
     public String getScope() {
 
