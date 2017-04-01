@@ -40,7 +40,17 @@ public class Companion {
             model = new VBoxModel(box);
             PageBox newVbox = new PageBox();
             newVbox.setModel(model);
+            /**
+             * TODO:
+             * move these methods to a controller
+             */
             newVbox.getChildren().add(new Label(model.getName()));
+            if (model.getAttributes() != null){
+                for (Attribute att:model.getAttributes()
+                     ) {
+                    newVbox.getChildren().add(new Label(att.getName()));
+                }
+            }
             addToPlane(newVbox, (double) model.getRow(), (double) model.getCol());
             //fix anchorpane covering menubar
         }

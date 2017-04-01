@@ -18,7 +18,7 @@ public class Box {
     //width of the Box
     private Float width;
     //list of relations to other boxes
-    private List<UMLloader.relation> relations;
+    private List<Relation> relations;
     //list of attributes
     private List<Attribute> attributes;
     //list of operations
@@ -36,7 +36,7 @@ public class Box {
         return width;
     }
 
-    public List<relation> getRelations() {
+    public List<Relation> getRelations() {
         return relations;
     }
 
@@ -72,8 +72,8 @@ public class Box {
         this.width = width;
     }
 
-    @XmlElement(name = "relation")
-    public void setRelations(List<relation> relations) {
+    @XmlElement(name = "Relation")
+    public void setRelations(List<Relation> relations) {
         this.relations = relations;
     }
 

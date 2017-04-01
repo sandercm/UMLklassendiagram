@@ -5,10 +5,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 /**
  * Created by sander on 15/03/17.
  */
-public class relation {
-    // gives the type of relation
+public class Relation {
+    // gives the type of Relation
     private String type;
-    // gives who the Box is in a relation with
+    // gives who the Box is in a Relation with
     private String with;
 
     public String getType() {
@@ -31,7 +31,7 @@ public class relation {
 
     @Override
     public String toString() {
-        return "relation{" +
+        return "Relation{" +
                 "type='" + type + '\'' +
                 ", with='" + with + '\'' +
                 '}';

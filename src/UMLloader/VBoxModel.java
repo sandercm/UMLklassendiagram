@@ -15,7 +15,7 @@ public class VBoxModel implements Observable {
     //boxes -> relations, attributes and operations
     private String name;
     private List<Attribute> attributes = null;
-    private List<Relation> relations = null;
+    private List<UMLloader.Relation> relations = null;
     private List<Operation> operations = null;
     private Float row;
     private Float col;
@@ -26,6 +26,7 @@ public class VBoxModel implements Observable {
         this.name = box.getName();
         this.attributes = box.getAttributes();
         this.operations = box.getOperations();
+        this.relations = box.getRelations();
         this.row = box.getRow();
         this.col = box.getCol();
         this.width = box.getWidth();
@@ -53,11 +54,11 @@ public class VBoxModel implements Observable {
         return operations;
     }
 
-    public List<Relation> getRelations() {
+    public List<UMLloader.Relation> getRelations() {
         return relations;
     }
 
-    public void setRelations(List<Relation> relations) {
+    public void setRelations(List<UMLloader.Relation> relations) {
         this.relations = relations;
     }
 
