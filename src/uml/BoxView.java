@@ -30,6 +30,9 @@ public class BoxView {
             newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
+            OperationView operationView = new OperationView(newVbox, model);
+            operationView.addOperations();
+
             //fix anchorpane covering menubar
         }
     }

@@ -26,7 +26,7 @@ public class AttributeView {
                 else{
                     vis = "+";
                 }
-                vBox.getChildren().add(new Label(vis +att.getName() + ":" +att.getType()));
+                vBox.getChildren().add(new Label(vis +att.getName() + " : " +att.getType()));
             }
         }
         return vBox;

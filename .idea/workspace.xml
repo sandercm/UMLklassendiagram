@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uml/OperationView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Attribute.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Diagram.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Operation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Unmarshal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/circle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/sample.fxml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Attribute.java" afterPath="$PROJECT_DIR$/src/uml/Attribute.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/AttributeView.java" afterPath="$PROJECT_DIR$/src/uml/AttributeView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Box.java" afterPath="$PROJECT_DIR$/src/uml/Box.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/BoxView.java" afterPath="$PROJECT_DIR$/src/uml/BoxView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Companion.java" afterPath="$PROJECT_DIR$/src/uml/Companion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Diagram.java" afterPath="$PROJECT_DIR$/src/uml/Diagram.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Main.java" afterPath="$PROJECT_DIR$/src/uml/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Operation.java" afterPath="$PROJECT_DIR$/src/uml/Operation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/PageBox.java" afterPath="$PROJECT_DIR$/src/uml/PageBox.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Relation.java" afterPath="$PROJECT_DIR$/src/uml/Relation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/RelationView.java" afterPath="$PROJECT_DIR$/src/uml/RelationView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Unmarshal.java" afterPath="$PROJECT_DIR$/src/uml/Unmarshal.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/Unmarshaller.java" afterPath="$PROJECT_DIR$/src/uml/Unmarshaller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" afterPath="$PROJECT_DIR$/src/uml/VBoxModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/circle.xml" afterPath="$PROJECT_DIR$/src/uml/circle.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/sample.css" afterPath="$PROJECT_DIR$/src/uml/sample.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/UMLloader/sample.fxml" afterPath="$PROJECT_DIR$/src/uml/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/AttributeView.java" afterPath="$PROJECT_DIR$/src/uml/AttributeView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/BoxView.java" afterPath="$PROJECT_DIR$/src/uml/BoxView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/OperationView.java" afterPath="$PROJECT_DIR$/src/uml/OperationView.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,8 +76,8 @@
       <file leaf-file-name="Companion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uml/Companion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="378">
+              <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,8 +98,8 @@
       <file leaf-file-name="OperationView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uml/OperationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -137,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttributeView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AttributeView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uml/AttributeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="88" lean-forward="false" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+            <state relative-caret-position="558">
+              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -159,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoxView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoxView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uml/BoxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -273,6 +251,9 @@
         <option value="$PROJECT_DIR$/src/UMLloader/AttributeView.java" />
         <option value="$PROJECT_DIR$/src/uml/Attribute.java" />
         <option value="$PROJECT_DIR$/src/uml/AttributeView.java" />
+        <option value="$PROJECT_DIR$/src/uml/OperationView.java" />
+        <option value="$PROJECT_DIR$/src/uml/Companion.java" />
+        <option value="$PROJECT_DIR$/src/uml/BoxView.java" />
       </list>
     </option>
   </component>
@@ -992,11 +973,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491304482104</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="uhh vbox styling">
+      <created>1491306588092</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1491306588092</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51333000" />
+    <option name="totallyTimeSpent" value="51748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1446,26 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/BoxView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/Companion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/RelationView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -1500,19 +1468,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/OperationView.java">
+    <entry file="file://$PROJECT_DIR$/src/uml/Companion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/AttributeView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="88" lean-forward="false" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        <state relative-caret-position="558">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uml/OperationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uml/BoxView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
