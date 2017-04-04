@@ -32,7 +32,6 @@ public class Companion {
         //this passes the anchorpane with vboxes in it to the relationview
         RelationView relationView = new RelationView(anchorpane);
         relationView.placeArrows();
-
     }
 
     public void closeImage(ActionEvent actionEvent) {

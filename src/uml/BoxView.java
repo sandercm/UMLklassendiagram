@@ -23,17 +23,21 @@ public class BoxView {
                 ) {
             //sets the model for the box
             VBoxModel model = new VBoxModel(box);
-            PageBox newVbox = new PageBox();
+            PageBox newVbox = new PageBox(4);
             newVbox.setModel(model);
             //adds the name to the box and adds a seperator below the name
             newVbox.getChildren().add(new Label(model.getName()));
-            newVbox.getChildren().add(new Separator());
+            Separator separator = new Separator();
+            separator.setId("separator");
+            newVbox.getChildren().add(separator);
             //adds the attributes and adds a seperator below the attributes
             newVbox.getStyleClass().add("uml/uml.css");
             newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
-            newVbox.getChildren().add(new Separator());
+            Separator separatorBottom = new Separator();
+            separatorBottom.setId("separator");
+            newVbox.getChildren().add(separatorBottom);
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();

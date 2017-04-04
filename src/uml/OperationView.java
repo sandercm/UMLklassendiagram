@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 
 /**
  * Created by sander on 04/04/17.
+ * controls the view for the operations
  */
 public class OperationView {
     private PageBox vBox;
