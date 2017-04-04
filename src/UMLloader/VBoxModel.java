@@ -3,7 +3,6 @@ package UMLloader;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 
-import javax.management.relation.Relation;
 import java.util.ArrayList;
 import java.util.List;
 

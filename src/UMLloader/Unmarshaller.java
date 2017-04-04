@@ -14,8 +14,6 @@ public class Unmarshaller {
         chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML files", "*.xml"));
         File file = chooser.showOpenDialog(null);
         Unmarshal un = new Unmarshal();
-        //unmarshalling copypasta
-        Diagram diagram;
         try {
             return un.unmarshaller(file);
         } catch (JAXBException e) {

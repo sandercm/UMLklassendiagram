@@ -1,0 +1,41 @@
+package UMLloader;
+
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+
+/**
+ * Created by sander on 04/04/17.
+ */
+public class BoxView {
+    private VBoxModel model;
+    private Unmarshaller unmarshaller;
+    private Diagram diagram;
+    private AnchorPane anchorpane;
+
+    public BoxView(AnchorPane anchorpane) {
+        this.anchorpane = anchorpane;
+    }
+
+    public void setBoxes() {
+        unmarshaller = new Unmarshaller();
+        diagram = unmarshaller.unmarshall();
+        for (Box box : diagram.getList()
+                ) {
+            model = new VBoxModel(box);
+            PageBox newVbox = new PageBox();
+            newVbox.setModel(model);
+            newVbox.getChildren().add(new Label(model.getName()));
+            //adds the attributes
+            AttributeView attributeView = new AttributeView(newVbox, model);
+            addToPlane(attributeView.addAtt(), (double) model.getRow(), (double) model.getCol());
+            //fix anchorpane covering menubar
+        }
+    }
+
+    private void addToPlane(VBox vbox, Double row, Double col) {
+        anchorpane.getChildren().addAll(vbox);
+        AnchorPane.setTopAnchor(vbox, row);
+        AnchorPane.setLeftAnchor(vbox, col);
+    }
+}

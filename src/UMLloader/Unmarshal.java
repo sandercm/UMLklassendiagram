@@ -1,5 +1,7 @@
 package UMLloader;
 
+import UMLloader.Diagram;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -10,7 +12,6 @@ import java.io.File;
 public class Unmarshal {
     public Diagram unmarshaller(File file) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(Diagram.class);
-        Diagram da = (Diagram) jc.createUnmarshaller().unmarshal(file);
-        return da;
+        return (Diagram) jc.createUnmarshaller().unmarshal(file);
     }
 }
