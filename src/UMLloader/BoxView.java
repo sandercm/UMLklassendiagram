@@ -6,11 +6,9 @@ import javafx.scene.layout.VBox;
 
 /**
  * Created by sander on 04/04/17.
+ * this file is the view for the boxes
  */
 public class BoxView {
-    private VBoxModel model;
-    private Unmarshaller unmarshaller;
-    private Diagram diagram;
     private AnchorPane anchorpane;
 
     public BoxView(AnchorPane anchorpane) {
@@ -18,11 +16,11 @@ public class BoxView {
     }
 
     public void setBoxes() {
-        unmarshaller = new Unmarshaller();
-        diagram = unmarshaller.unmarshall();
+        Unmarshaller unmarshaller = new Unmarshaller();
+        Diagram diagram = unmarshaller.unmarshall();
         for (Box box : diagram.getList()
                 ) {
-            model = new VBoxModel(box);
+            VBoxModel model = new VBoxModel(box);
             PageBox newVbox = new PageBox();
             newVbox.setModel(model);
             newVbox.getChildren().add(new Label(model.getName()));

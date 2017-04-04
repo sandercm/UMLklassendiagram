@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by sander on 15/03/17.
+ * this file is used in unmarshalling for the box
  */
 public class Box {
 

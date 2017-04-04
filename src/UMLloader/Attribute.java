@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  * Created by sander on 15/03/17.
+ * this file is used in unmarshalling for attributes
  */
 public class Attribute {
     private String scope;

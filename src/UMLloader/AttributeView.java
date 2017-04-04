@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 
 /**
  * Created by sander on 04/04/17.
+ * this class controls the attribute view
  */
 public class AttributeView {
     private PageBox vBox;

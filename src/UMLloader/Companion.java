@@ -27,7 +27,9 @@ public class Companion {
     public void open(ActionEvent actionEvent) {
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes();
-        RelationView relationView = new RelationView();
+        //this passes the anchorpane with vboxes in it to the relationview
+        RelationView relationView = new RelationView(anchorpane);
+
     }
 
     public void closeImage(ActionEvent actionEvent) {
