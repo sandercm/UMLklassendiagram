@@ -27,6 +27,7 @@ public class Companion {
     public void open(ActionEvent actionEvent) {
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes();
+        RelationView relationView = new RelationView();
     }
 
     public void closeImage(ActionEvent actionEvent) {
