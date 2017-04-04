@@ -21,18 +21,20 @@ public class BoxView {
         Diagram diagram = unmarshaller.unmarshall();
         for (Box box : diagram.getList()
                 ) {
+            //sets the model for the box
             VBoxModel model = new VBoxModel(box);
             PageBox newVbox = new PageBox();
             newVbox.setModel(model);
-
+            //adds the name to the box and adds a seperator below the name
             newVbox.getChildren().add(new Label(model.getName()));
             newVbox.getChildren().add(new Separator());
-            //adds the attributes
+            //adds the attributes and adds a seperator below the attributes
             newVbox.getStyleClass().add("uml/uml.css");
             newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
             newVbox.getChildren().add(new Separator());
+            //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
         }
