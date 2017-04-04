@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="removed unused classes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UMLloader/BoxView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UMLklassendiagram/UMLloader/Unmarshal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/oldClasses/BoxController.java" afterPath="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/AttributeView.java" afterPath="$PROJECT_DIR$/src/UMLloader/AttributeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Companion.java" afterPath="$PROJECT_DIR$/src/UMLloader/Companion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Unmarshal.java" afterPath="$PROJECT_DIR$/src/UMLloader/Unmarshal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/Unmarshaller.java" afterPath="$PROJECT_DIR$/src/UMLloader/Unmarshaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" afterPath="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,7 +70,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
@@ -107,8 +99,8 @@
       <file leaf-file-name="AttributeView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/AttributeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="198">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -147,7 +139,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unmarshaller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Unmarshaller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UMLloader/Unmarshaller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -241,11 +233,11 @@
         <option value="$PROJECT_DIR$/src/UMLloader/VBoxModel.java" />
         <option value="$PROJECT_DIR$/src/oldClasses/BoxController.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Companion.java" />
-        <option value="$PROJECT_DIR$/src/UMLloader/AttributeView.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/BoxView.java" />
         <option value="$PROJECT_DIR$/src/oldClasses/Unmarshal.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Unmarshal.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Unmarshaller.java" />
+        <option value="$PROJECT_DIR$/src/UMLloader/AttributeView.java" />
       </list>
     </option>
   </component>
@@ -918,11 +910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491295269842</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="removed unused classes">
+      <created>1491295941462</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1491295941462</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42762000" />
+    <option name="totallyTimeSpent" value="42807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1382,16 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLloader/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1399,14 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/AttributeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1435,6 +1416,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/AttributeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UMLloader/Companion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
