@@ -1,4 +1,4 @@
-package UMLloader;
+package uml;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
@@ -14,7 +14,7 @@ public class VBoxModel implements Observable {
     //boxes -> relations, attributes and operations
     private String name;
     private List<Attribute> attributes;
-    private List<UMLloader.Relation> relations;
+    private List<uml.Relation> relations;
     private List<Operation> operations;
     private Float row;
     private Float col;
@@ -53,11 +53,11 @@ public class VBoxModel implements Observable {
         return operations;
     }
 
-    public List<UMLloader.Relation> getRelations() {
+    public List<uml.Relation> getRelations() {
         return relations;
     }
 
-    public void setRelations(List<UMLloader.Relation> relations) {
+    public void setRelations(List<uml.Relation> relations) {
         this.relations = relations;
     }
 

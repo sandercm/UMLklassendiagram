@@ -1,4 +1,4 @@
-package UMLloader;
+package uml;
 
 import javafx.stage.FileChooser;
 

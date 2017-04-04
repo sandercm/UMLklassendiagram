@@ -1,4 +1,4 @@
-package UMLloader;
+package uml;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -26,7 +26,7 @@ public class Companion {
 
     public void open(ActionEvent actionEvent) {
         anchorpane.getChildren().clear();
-        anchorpane.getStylesheets().add("UMLloader/sample.css");
+        anchorpane.getStylesheets().add("uml/sample.css");
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes();
         //this passes the anchorpane with vboxes in it to the relationview

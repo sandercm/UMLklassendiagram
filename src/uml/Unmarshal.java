@@ -1,6 +1,4 @@
-package UMLloader;
-
-import UMLloader.Diagram;
+package uml;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

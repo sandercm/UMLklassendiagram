@@ -1,4 +1,4 @@
-package UMLloader;
+package uml;
 
 import javafx.scene.control.Label;
 
@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 public class AttributeView {
     private PageBox vBox;
     private VBoxModel boxModel;
+    private String vis;
 
     public AttributeView(PageBox vBox, VBoxModel boxModel) {
         this.vBox = vBox;
@@ -19,7 +20,13 @@ public class AttributeView {
         if (boxModel.getAttributes() != null) {
             for (Attribute att : boxModel.getAttributes()
                     ) {
-                vBox.getChildren().add(new Label(att.getName()));
+                if (att.getVisibility().equals("private")){
+                    vis = "-";
+                }
+                else{
+                    vis = "+";
+                }
+                vBox.getChildren().add(new Label(vis +att.getName() + ":" +att.getType()));
             }
         }
         return vBox;

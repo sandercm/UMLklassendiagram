@@ -1,12 +1,10 @@
-package UMLloader;
+package uml;
 
-import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * Created by sander on 04/04/17.

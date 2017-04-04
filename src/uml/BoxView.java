@@ -1,4 +1,4 @@
-package UMLloader;
+package uml;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -26,7 +26,7 @@ public class BoxView {
 
             newVbox.getChildren().add(new Label(model.getName()));
             //adds the attributes
-            newVbox.getStyleClass().add("UMLloader/sample.css");
+            newVbox.getStyleClass().add("uml/sample.css");
             newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
