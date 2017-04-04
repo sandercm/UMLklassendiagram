@@ -13,9 +13,9 @@ public class VBoxModel implements Observable {
 
     //boxes -> relations, attributes and operations
     private String name;
-    private List<Attribute> attributes = null;
-    private List<UMLloader.Relation> relations = null;
-    private List<Operation> operations = null;
+    private List<Attribute> attributes;
+    private List<UMLloader.Relation> relations;
+    private List<Operation> operations;
     private Float row;
     private Float col;
     private Float width;
@@ -124,6 +124,20 @@ public class VBoxModel implements Observable {
         for (InvalidationListener listener : listenerList) {
             listener.invalidated(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "VBoxModel{" +
+                "name='" + name + '\'' +
+                ", attributes=" + attributes +
+                ", relations=" + relations +
+                ", operations=" + operations +
+                ", row=" + row +
+                ", col=" + col +
+                ", width=" + width +
+                ", listenerList=" + listenerList +
+                '}';
     }
 
     @Override

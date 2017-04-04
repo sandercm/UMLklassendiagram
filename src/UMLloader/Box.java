@@ -73,7 +73,7 @@ public class Box {
         this.width = width;
     }
 
-    @XmlElement(name = "Relation")
+    @XmlElement(name = "relation")
     public void setRelations(List<Relation> relations) {
         this.relations = relations;
     }
@@ -83,7 +83,7 @@ public class Box {
         this.attributes = Attributes;
     }
 
-    @XmlElement(name = "operations")
+    @XmlElement(name = "operation")
     public void setOperations(List<Operation> Operations) {
         this.operations = Operations;
     }

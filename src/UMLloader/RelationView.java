@@ -2,6 +2,7 @@ package UMLloader;
 
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Line;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,8 @@ public class RelationView {
         for (PageBox box: boxes
              ) {
             System.out.println(box.getModel().getRelations());
+            Line line = new Line();
+            anchorpane.getChildren().add(line);
         }
     }
 
