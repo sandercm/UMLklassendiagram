@@ -28,7 +28,7 @@
                 </MenuBar>
             </top>
             <center>
-                <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@sample.css" BorderPane.alignment="CENTER" />
+                <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
             </center>
         </BorderPane>
     </children>

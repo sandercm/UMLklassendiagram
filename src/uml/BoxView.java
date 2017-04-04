@@ -1,6 +1,7 @@
 package uml;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -25,15 +26,15 @@ public class BoxView {
             newVbox.setModel(model);
 
             newVbox.getChildren().add(new Label(model.getName()));
+            newVbox.getChildren().add(new Separator());
             //adds the attributes
-            newVbox.getStyleClass().add("uml/sample.css");
+            newVbox.getStyleClass().add("uml/uml.css");
             newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
+            newVbox.getChildren().add(new Separator());
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
-
-            //fix anchorpane covering menubar
         }
     }
 

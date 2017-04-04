@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uml/sample.css" afterPath="$PROJECT_DIR$/src/uml/uml.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uml/sample.fxml" afterPath="$PROJECT_DIR$/src/uml/uml.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/AttributeView.java" afterPath="$PROJECT_DIR$/src/uml/AttributeView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/BoxView.java" afterPath="$PROJECT_DIR$/src/uml/BoxView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/OperationView.java" afterPath="$PROJECT_DIR$/src/uml/OperationView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/Companion.java" afterPath="$PROJECT_DIR$/src/uml/Companion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/Main.java" afterPath="$PROJECT_DIR$/src/uml/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,8 +142,8 @@
       <file leaf-file-name="BoxView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uml/BoxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+            <state relative-caret-position="198">
+              <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +151,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uml/sample.css">
+      <file leaf-file-name="uml.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uml/uml.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
               <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
@@ -980,11 +982,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491306588092</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="created base operationviewer still needs to add attributes to the operation">
+      <created>1491307010085</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1491307010085</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51748000" />
+    <option name="totallyTimeSpent" value="51913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1076,7 +1085,8 @@
     <MESSAGE value="create reltionview and arraylist of the relations" />
     <MESSAGE value="more relations changes and added more optional values to pagebox" />
     <MESSAGE value="uhh vbox styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="uhh vbox styling" />
+    <MESSAGE value="created base operationviewer still needs to add attributes to the operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="created base operationviewer still needs to add attributes to the operation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1119,7 +1129,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/sample.fxml">
+    <entry file="file://$PROJECT_DIR$/src/uml/uml.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
@@ -1233,7 +1243,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/sample.fxml">
+    <entry file="file://$PROJECT_DIR$/src/uml/uml.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
@@ -1407,7 +1417,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/sample.fxml">
+    <entry file="file://$PROJECT_DIR$/src/uml/uml.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
@@ -1418,7 +1428,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/sample.css">
+    <entry file="file://$PROJECT_DIR$/src/uml/uml.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
@@ -1496,8 +1506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/BoxView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+        <state relative-caret-position="198">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
