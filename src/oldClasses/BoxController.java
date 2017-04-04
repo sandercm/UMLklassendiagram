@@ -1,5 +1,8 @@
-package UMLloader;
+package oldClasses;
 
+import UMLloader.Attribute;
+import UMLloader.Box;
+import UMLloader.Diagram;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;

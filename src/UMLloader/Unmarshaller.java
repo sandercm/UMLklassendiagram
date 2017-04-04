@@ -15,12 +15,12 @@ public class Unmarshaller {
         File file = chooser.showOpenDialog(null);
         Unmarshal un = new Unmarshal();
         //unmarshalling copypasta
-        Diagram diagram = null;
+        Diagram diagram;
         try {
-            diagram = un.unmarshaller(file);
+            return un.unmarshaller(file);
         } catch (JAXBException e) {
             System.out.println("JAXB, unmarshalling error");
         }
-        return diagram;
+        return null;
     }
 }
