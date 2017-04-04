@@ -65,24 +65,24 @@ public class VBoxModel implements Observable {
         this.operations = operations;
     }
 
-    public Float getRow() {
-        return row;
+    public double getRow() {
+        return (double)row;
     }
 
     public void setRow(Float row) {
         this.row = row;
     }
 
-    public Float getCol() {
-        return col;
+    public double getCol() {
+        return (double) col;
     }
 
     public void setCol(Float col) {
         this.col = col;
     }
 
-    public Float getWidth() {
-        return width;
+    public Double getWidth() {
+        return (double)width;
     }
 
     public void setWidth(Float width) {
@@ -118,7 +118,10 @@ public class VBoxModel implements Observable {
         this.operations = box.getOperations();
     }
 
+
     private List<InvalidationListener> listenerList = new ArrayList<>();
+
+
 
     private void fireInvalidationEvent() {
         for (InvalidationListener listener : listenerList) {

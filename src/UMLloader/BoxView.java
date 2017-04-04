@@ -23,10 +23,13 @@ public class BoxView {
             VBoxModel model = new VBoxModel(box);
             PageBox newVbox = new PageBox();
             newVbox.setModel(model);
+
             newVbox.getChildren().add(new Label(model.getName()));
             //adds the attributes
+            newVbox.getStyleClass().add("UMLloader/sample.css");
+            newVbox.setId("VBox");
             AttributeView attributeView = new AttributeView(newVbox, model);
-            addToPlane(attributeView.addAtt(), (double) model.getRow(), (double) model.getCol());
+            addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
             //fix anchorpane covering menubar
         }
     }

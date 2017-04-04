@@ -13,20 +13,39 @@ import java.util.function.Predicate;
  * this class controls the relation view
  */
 public class RelationView {
-
+    AnchorPane anchorpane;
     public RelationView(AnchorPane anchorpane){
+        this.anchorpane = anchorpane;
+    }
+    public void placeArrows(){
         List<PageBox> boxes = new ArrayList<>();
+        //creates an array list of the boxes currently in the anchorplane
+        //TODO: check if I can remove this loop
         for (Object obj: anchorpane.getChildren().toArray()
-             ) {
+                ) {
             if (obj instanceof PageBox){
                 boxes.add((PageBox) obj);
             }
         }
         for (PageBox box: boxes
-             ) {
-            System.out.println(box.getModel().getRelations());
-            Line line = new Line();
-            anchorpane.getChildren().add(line);
+                ) {
+            VBoxModel boxModel = box.getModel();
+            if (boxModel.getRelations() != null) {
+                for (Relation relation : boxModel.getRelations()
+                        ) {
+                    Line line = new Line();
+                    line.setStartX(boxModel.getCol());
+                    line.setStartY(boxModel.getRow());
+                    for (PageBox target : boxes
+                            ) {
+                        if (relation.getWith().equals(target.getModel().getName())) {
+                            line.setEndX(target.getModel().getCol());
+                            line.setEndY(target.getModel().getRow());
+                        }
+                    }
+                    anchorpane.getChildren().add(line);
+                }
+            }
         }
     }
 

@@ -25,10 +25,13 @@ public class Companion {
      */
 
     public void open(ActionEvent actionEvent) {
+        anchorpane.getChildren().clear();
+        anchorpane.getStylesheets().add("UMLloader/sample.css");
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes();
         //this passes the anchorpane with vboxes in it to the relationview
         RelationView relationView = new RelationView(anchorpane);
+        relationView.placeArrows();
 
     }
 
