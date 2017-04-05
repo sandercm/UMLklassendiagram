@@ -6,6 +6,9 @@ import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by sander on 04/04/17.
  * this file is the view for the boxes
@@ -67,5 +70,14 @@ public class BoxView {
         anchorpane.getChildren().add(vbox);
         AnchorPane.setTopAnchor(vbox, row);
         AnchorPane.setLeftAnchor(vbox, col);
+    }
+    public static String getVis(String string){
+        Map<String, String> visibilty = new HashMap<>();
+        visibilty.put("private", "-");
+        visibilty.put("public", "+");
+        visibilty.put("protected", "#");
+        visibilty.put("derived", "/");
+        visibilty.put("package", "~");
+        return visibilty.get(string);
     }
 }

@@ -2,6 +2,9 @@ package uml;
 
 import javafx.scene.control.Label;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by sander on 04/04/17.
  * controls the view for the operations
@@ -13,6 +16,7 @@ public class OperationView {
     public OperationView(PageBox vBox, VBoxModel boxModel) {
         this.vBox = vBox;
         this.boxModel = boxModel;
+
     }
 
     public PageBox addOperations() {
@@ -20,13 +24,8 @@ public class OperationView {
             StringBuilder attributestring = new StringBuilder();
             for (Operation opt : boxModel.getOperations()
                     ) {
-                String vis;
-                if (opt.getVisibility().equals("private")){
-                    vis = "-";
-                }
-                else{
-                    vis = "+";
-                }
+
+                String vis = BoxView.getVis(opt.getVisibility());
 
                 if (opt.getAttributes() != null){
                     for (Attribute att:opt.getAttributes()

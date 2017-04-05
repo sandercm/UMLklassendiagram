@@ -43,7 +43,6 @@ public class RelationView {
                     }
                     anchorpane.getChildren().add(line);
                     line.setId("relations");
-
                 }
             }
         }
