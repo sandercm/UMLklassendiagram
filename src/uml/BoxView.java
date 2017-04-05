@@ -46,7 +46,6 @@ public class BoxView {
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
             //fix this call somehow
-            model.setHeight(newVbox.getHeight());
 
         }
     }
@@ -64,7 +63,7 @@ public class BoxView {
         newVbox.getChildren().add(separator);
     }
 
-    private void addToPlane(VBox vbox, Double row, Double col) {
+    private void addToPlane(PageBox vbox, Double row, Double col) {
         anchorpane.getChildren().add(vbox);
         AnchorPane.setTopAnchor(vbox, row);
         AnchorPane.setLeftAnchor(vbox, col);
