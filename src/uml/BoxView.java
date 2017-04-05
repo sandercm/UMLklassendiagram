@@ -6,6 +6,7 @@ import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,10 +16,11 @@ import java.util.Map;
  */
 public class BoxView {
     private AnchorPane anchorpane;
-
+    public BoxView(File file){}
     public BoxView(AnchorPane anchorpane) {
         this.anchorpane = anchorpane;
     }
+
 
     public void setBoxes(Diagram diagram) {
 

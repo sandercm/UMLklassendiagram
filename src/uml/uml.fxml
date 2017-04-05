@@ -10,9 +10,33 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uml.Companion">
     <children>
+      <BorderPane fx:id="arrowborderpane" prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane fx:id="arrowPane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+             <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+                 <menus>
+                     <Menu mnemonicParsing="false" text="File">
+                         <items>
+                             <MenuItem mnemonicParsing="false" onAction="#open" text="Open..." />
+                             <MenuItem mnemonicParsing="false" onAction="#closeImage" text="Close" />
+                             <MenuItem mnemonicParsing="false" onAction="#closeProgram" text="Quit" />
+                         </items>
+                     </Menu>
+                 </menus>
+                 <BorderPane.margin>
+                     <Insets bottom="1.0" />
+                 </BorderPane.margin>
+             </MenuBar>
+         </top>
+      </BorderPane>
         <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
-            <top>
-                <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="TOP_CENTER">
+            <center>
+                <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
+            </center>
+         <top>
+                <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
@@ -26,10 +50,7 @@
                         <Insets bottom="1.0" />
                     </BorderPane.margin>
                 </MenuBar>
-            </top>
-            <center>
-                <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
-            </center>
+         </top>
         </BorderPane>
     </children>
 </StackPane>

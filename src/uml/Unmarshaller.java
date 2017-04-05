@@ -9,10 +9,7 @@ import java.io.File;
  * Created by sander on 01/04/17.
  */
 public class Unmarshaller {
-    public Diagram unmarshall() {
-        FileChooser chooser = new FileChooser();
-        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML files", "*.xml"));
-        File file = chooser.showOpenDialog(null);
+    public Diagram unmarshall(File file) {
         Unmarshal un = new Unmarshal();
         try {
             return un.unmarshaller(file);

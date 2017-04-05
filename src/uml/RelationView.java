@@ -1,7 +1,9 @@
 package uml;
 
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +13,20 @@ import java.util.List;
  * this class controls the relation view
  */
 public class RelationView {
-    AnchorPane anchorpane;
+    public AnchorPane anchorpane;
+    public AnchorPane arrowPane;
+    public BorderPane arrowborderpane;
     public RelationView(AnchorPane anchorpane){
         this.anchorpane = anchorpane;
     }
-    public void placeArrows(){
+    public RelationView(AnchorPane anchorpane, AnchorPane arrowPane){
+        this.anchorpane = anchorpane;
+        this.arrowPane = arrowPane;
+    }
+
+    private List<PageBox> createObjList(AnchorPane anchorPane){
+
         List<PageBox> boxes = new ArrayList<>();
-        //creates an array list of the boxes currently in the anchorplane
-        //TODO: check if I can remove this loop
         anchorpane.applyCss();
         anchorpane.layout();
         for (Object obj: anchorpane.getChildren()
@@ -29,6 +37,12 @@ public class RelationView {
                 ((PageBox) obj).getModel().setHeight(((PageBox) obj).getHeight());
             }
         }
+        return boxes;
+    }
+    public void placeArrows(){
+        //creates an array list of the boxes currently in the anchorplane
+        //TODO: check if I can remove this loop
+        List<PageBox> boxes = createObjList(anchorpane);
         for (PageBox box: boxes
                 ) {
             VBoxModel boxModel = box.getModel();
@@ -45,12 +59,10 @@ public class RelationView {
                             line.setEndY(target.getModel().getRow() + target.getModel().getHeight()/2);
                         }
                     }
-                    anchorpane.getChildren().add(line);
+                    arrowPane.getChildren().add(line);
                     line.setId("relations");
                 }
             }
         }
     }
-
-
 }
