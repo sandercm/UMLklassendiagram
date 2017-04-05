@@ -50,6 +50,7 @@ public class OperationView {
             vBox.getChildren().add(label);
             label.setId("operation");
         }
+
         return vBox;
     }
 }

@@ -28,6 +28,7 @@ public class BoxView {
             newVbox.setPrefWidth(model.getWidth());
             newVbox.setId("VBox");
 
+
             //adds the name to the box and adds a seperator below the name
             setTitle(newVbox, model);
             addSeperator(newVbox);
@@ -44,6 +45,9 @@ public class BoxView {
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
+            //fix this call somehow
+            model.setHeight(newVbox.getHeight());
+
         }
     }
     private void setTitle(PageBox newVbox, VBoxModel model){

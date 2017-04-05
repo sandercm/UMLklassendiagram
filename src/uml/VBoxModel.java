@@ -19,6 +19,7 @@ public class VBoxModel implements Observable {
     private Float row;
     private Float col;
     private Float width;
+    private Double height;
 
 
     public VBoxModel(Box box) {
@@ -126,6 +127,14 @@ public class VBoxModel implements Observable {
         for (InvalidationListener listener : listenerList) {
             listener.invalidated(this);
         }
+    }
+
+    public Double getHeight() {
+        return height;
+    }
+
+    public void setHeight(Double height) {
+        this.height = height;
     }
 
     @Override
