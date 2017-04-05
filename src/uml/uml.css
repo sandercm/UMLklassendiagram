@@ -1,5 +1,6 @@
+
 #topTitle{
-    -fx-font-size: 120%;
+    -fx-font-size: 100%;
     -fx-alignment: center;
     -fx-font-weight: bold;
 }
@@ -8,6 +9,8 @@
     -fx-border-color: black;
     -fx-padding: 2 0 2 0;
     -fx-border-radius: 5px;
+    -fx-background-size: cover;
+    -fx-background-color: white;
 }
 #separator *.line{
     -fx-border-style: solid;
