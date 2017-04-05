@@ -1,5 +1,6 @@
 package uml;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
@@ -25,34 +26,38 @@ public class BoxView {
             PageBox newVbox = new PageBox(4);
             newVbox.setModel(model);
             newVbox.setPrefWidth(model.getWidth());
-
+            newVbox.setId("VBox");
 
             //adds the name to the box and adds a seperator below the name
-            Label title = new Label(model.getName());
-            title.setId("title");
-            newVbox.getChildren().add(title);
-            Separator separator = new Separator();
-            separator.setId("separator");
-            newVbox.getChildren().add(separator);
-
+            setTitle(newVbox, model);
+            addSeperator(newVbox);
 
             //adds the attributes and adds a seperator below the attributes
-            newVbox.getStyleClass().add("uml/uml.css");
-            newVbox.setId("VBox");
+
             AttributeView attributeView = new AttributeView(newVbox, model);
             addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
 
-
             //adds a separator
-            Separator separatorBottom = new Separator();
-            separatorBottom.setId("separator");
-            newVbox.getChildren().add(separatorBottom);
+            addSeperator(newVbox);
 
 
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
         }
+    }
+    private void setTitle(PageBox newVbox, VBoxModel model){
+        Label title = new Label(model.getName());
+        newVbox.getChildren().add(title);
+        title.setPrefWidth(model.getWidth());
+        title.setId("topTitle");
+
+    }
+
+    private void addSeperator(PageBox newVbox){
+        Separator separator = new Separator();
+        separator.setId("separator");
+        newVbox.getChildren().add(separator);
     }
 
     private void addToPlane(VBox vbox, Double row, Double col) {

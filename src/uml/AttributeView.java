@@ -15,9 +15,6 @@ public class AttributeView {
         this.vBox = vBox;
         this.boxModel = boxModel;
     }
-    public AttributeView(Operation operation){
-
-    }
 
     public PageBox addAtt() {
         if (boxModel.getAttributes() != null) {
@@ -29,7 +26,9 @@ public class AttributeView {
                 else{
                     vis = "+";
                 }
-                vBox.getChildren().add(new Label(vis +att.getName() + " : " +att.getType()));
+                Label attributes = new Label(vis +att.getName() + " : " +att.getType());
+                attributes.setId("attributes");
+                vBox.getChildren().add(attributes);
             }
         }
         return vBox;

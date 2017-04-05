@@ -25,6 +25,7 @@ public class Companion {
      */
 
     public void open(ActionEvent actionEvent) {
+        //TODO: clean this up and implement argument passing
         anchorpane.getChildren().clear();
         anchorpane.getStylesheets().add("uml/uml.css");
         Unmarshaller unmarshaller = new Unmarshaller();
