@@ -21,8 +21,12 @@ public class RelationView {
         //TODO: check if I can remove this loop
         for (Object obj: anchorpane.getChildren()
                 ) {
+            anchorpane.applyCss();
+            anchorpane.layout();
             if (obj instanceof PageBox){
                 boxes.add((PageBox) obj);
+
+                ((PageBox) obj).getModel().setHeight(((PageBox) obj).getHeight());
             }
         }
         for (PageBox box: boxes
@@ -33,12 +37,12 @@ public class RelationView {
                         ) {
                     Line line = new Line();
                     line.setStartX(boxModel.getCol() + boxModel.getWidth()/2);
-                    line.setStartY(boxModel.getRow() + 40);
+                    line.setStartY(boxModel.getRow() + boxModel.getHeight()/2);
                     for (PageBox target : boxes
                             ) {
                         if (relation.getWith().equals(target.getModel().getName())) {
                             line.setEndX(target.getModel().getCol() + boxModel.getWidth()/2);
-                            line.setEndY(target.getModel().getRow() + 40);
+                            line.setEndY(target.getModel().getRow() + target.getModel().getHeight()/2);
                         }
                     }
                     anchorpane.getChildren().add(line);

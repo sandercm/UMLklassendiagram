@@ -9,6 +9,16 @@ import javafx.scene.layout.VBox;
 public class PageBox extends VBox {
     private AnchorPane anchorPane;
     private VBoxModel model;
+    private Double verticalHight;
+
+
+    public double getVerticalHeight() {
+        return verticalHight;
+    }
+
+    public void setHeight(Double verticalHight) {
+        this.verticalHight = verticalHight;
+    }
 
     public AnchorPane getAnchorPane() {
         return anchorPane;
