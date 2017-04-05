@@ -18,6 +18,7 @@ public class AttributeView {
 
     public PageBox addAtt() {
         if (boxModel.getAttributes() != null) {
+            String attributes = "";
             for (Attribute att : boxModel.getAttributes()
                     ) {
                 if (att.getVisibility().equals("private")){
@@ -26,10 +27,18 @@ public class AttributeView {
                 else{
                     vis = "+";
                 }
-                Label attributes = new Label(vis +att.getName() + " : " +att.getType());
-                attributes.setId("attributes");
-                vBox.getChildren().add(attributes);
+                attributes += vis +att.getName() + " : " +att.getType() + "\n";
+
+
             }
+            Label label = new Label(attributes);
+            label.setId("attributes");
+            vBox.getChildren().add(label);
+        }
+        else{
+            Label label = new Label("");
+            vBox.getChildren().add(label);
+            label.setId("attributes");
         }
         return vBox;
     }

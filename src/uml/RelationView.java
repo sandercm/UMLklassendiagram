@@ -32,13 +32,13 @@ public class RelationView {
                 for (Relation relation : boxModel.getRelations()
                         ) {
                     Line line = new Line();
-                    line.setStartX(boxModel.getCol());
-                    line.setStartY(boxModel.getRow());
+                    line.setStartX(boxModel.getCol() + boxModel.getWidth()/2);
+                    line.setStartY(boxModel.getRow() - box.getBoundsInParent().getHeight());
                     for (PageBox target : boxes
                             ) {
                         if (relation.getWith().equals(target.getModel().getName())) {
-                            line.setEndX(target.getModel().getCol());
-                            line.setEndY(target.getModel().getRow());
+                            line.setEndX(target.getModel().getCol() + boxModel.getWidth()/2);
+                            line.setEndY(target.getModel().getRow() - box.getHeight());
                         }
                     }
                     anchorpane.getChildren().add(line);

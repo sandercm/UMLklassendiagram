@@ -17,6 +17,7 @@ public class OperationView {
 
     public PageBox addOperations() {
         if (boxModel.getOperations() != null) {
+            StringBuilder attributestring = new StringBuilder();
             for (Operation opt : boxModel.getOperations()
                     ) {
                 String vis;
@@ -26,18 +27,28 @@ public class OperationView {
                 else{
                     vis = "+";
                 }
+
                 if (opt.getAttributes() != null){
                     for (Attribute att:opt.getAttributes()
                          ) {
                         String attribute = "(" + att.getName() + " : " + att.getType() + ")";
-                        vBox.getChildren().add(new Label(vis + opt.getName()+ attribute + " : " + opt.getType()));
+                        attributestring.append(vis).append(opt.getName()).append(attribute).append(" : ").append(opt.getType()).append("\n");
                     }
 
                 }
                 else {
-                    vBox.getChildren().add(new Label(vis + opt.getName() + " : " + opt.getType()));
+
+                    attributestring.append(vis).append(opt.getName()).append(" : ").append(opt.getType()).append("\n");
                 }
             }
+            Label label = new Label(attributestring.toString());
+            vBox.getChildren().add(label);
+            label.setId("operation");
+        }
+        else {
+            Label label = new Label("");
+            vBox.getChildren().add(label);
+            label.setId("operation");
         }
         return vBox;
     }

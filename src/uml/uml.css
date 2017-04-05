@@ -16,3 +16,9 @@
     -fx-background-color: black;
 
 }
+#attributes{
+    -fx-padding: 4;
+}
+#operation{
+    -fx-padding: 4;
+}

@@ -61,7 +61,7 @@ public class BoxView {
     }
 
     private void addToPlane(VBox vbox, Double row, Double col) {
-        anchorpane.getChildren().addAll(vbox);
+        anchorpane.getChildren().add(vbox);
         AnchorPane.setTopAnchor(vbox, row);
         AnchorPane.setLeftAnchor(vbox, col);
     }
