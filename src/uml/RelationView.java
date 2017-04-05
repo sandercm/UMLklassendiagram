@@ -19,10 +19,10 @@ public class RelationView {
         List<PageBox> boxes = new ArrayList<>();
         //creates an array list of the boxes currently in the anchorplane
         //TODO: check if I can remove this loop
+        anchorpane.applyCss();
+        anchorpane.layout();
         for (Object obj: anchorpane.getChildren()
                 ) {
-            anchorpane.applyCss();
-            anchorpane.layout();
             if (obj instanceof PageBox){
                 boxes.add((PageBox) obj);
 
