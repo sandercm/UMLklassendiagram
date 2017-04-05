@@ -26,7 +26,17 @@ public class OperationView {
                 else{
                     vis = "+";
                 }
-                vBox.getChildren().add(new Label(vis + opt.getName() + " : " + opt.getType()));
+                if (opt.getAttributes() != null){
+                    for (Attribute att:opt.getAttributes()
+                         ) {
+                        String attribute = "(" + att.getName() + " : " + att.getType() + ")";
+                        vBox.getChildren().add(new Label(vis + opt.getName()+ attribute + " : " + opt.getType()));
+                    }
+
+                }
+                else {
+                    vBox.getChildren().add(new Label(vis + opt.getName() + " : " + opt.getType()));
+                }
             }
         }
         return vBox;

@@ -15,6 +15,9 @@ public class AttributeView {
         this.vBox = vBox;
         this.boxModel = boxModel;
     }
+    public AttributeView(Operation operation){
+
+    }
 
     public PageBox addAtt() {
         if (boxModel.getAttributes() != null) {

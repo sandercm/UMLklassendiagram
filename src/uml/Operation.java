@@ -14,7 +14,7 @@ public class Operation {
     private String name;
     private String type;
     //these Attributes only have name and type
-    private List<Attribute> Attributes;
+    private List<Attribute> attributes;
 
     public String getScope() {
         return scope;
@@ -53,12 +53,12 @@ public class Operation {
     }
 
     public List<Attribute> getAttributes() {
-        return Attributes;
+        return attributes;
     }
 
-    @XmlElement
+    @XmlElement(name = "attribute")
     public void setAttributes(List<Attribute> Attributes) {
-        this.Attributes = Attributes;
+        this.attributes = Attributes;
     }
 
 

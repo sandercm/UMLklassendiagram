@@ -2,6 +2,7 @@
     -fx-border-width: 2px;
     -fx-border-color: black;
     -fx-padding: 2 0 2 0;
+    -fx-border-radius: 5px;
 }
 #separator *.line{
     -fx-border-style: solid;
@@ -9,4 +10,7 @@
     -fx-border-color: black;
     -fx-background-color: black;
 
+}
+#title{
+    -fx-font-style: oblique;
 }

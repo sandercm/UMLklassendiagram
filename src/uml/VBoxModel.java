@@ -66,7 +66,7 @@ public class VBoxModel implements Observable {
     }
 
     public double getRow() {
-        return (double)row;
+        return (double) row;
     }
 
     public void setRow(Float row) {
@@ -82,7 +82,7 @@ public class VBoxModel implements Observable {
     }
 
     public Double getWidth() {
-        return (double)width;
+        return (double) width;
     }
 
     public void setWidth(Float width) {
@@ -120,7 +120,6 @@ public class VBoxModel implements Observable {
 
 
     private List<InvalidationListener> listenerList = new ArrayList<>();
-
 
 
     private void fireInvalidationEvent() {
