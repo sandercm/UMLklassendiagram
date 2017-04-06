@@ -29,7 +29,7 @@
                 </MenuBar>
          </top>
          <center>
-            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <Pane fx:id="containerpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <AnchorPane fx:id="arrowPane" minHeight="0.0" stylesheets="@uml.css" />
                       <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" />

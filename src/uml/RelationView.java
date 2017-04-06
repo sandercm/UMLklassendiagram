@@ -17,10 +17,7 @@ import java.util.Map;
 public class RelationView {
     public AnchorPane anchorpane;
     public AnchorPane arrowPane;
-    public BorderPane arrowborderpane;
-    public RelationView(AnchorPane anchorpane){
-        this.anchorpane = anchorpane;
-    }
+
     public RelationView(AnchorPane anchorpane, AnchorPane arrowPane){
         this.anchorpane = anchorpane;
         this.arrowPane = arrowPane;
