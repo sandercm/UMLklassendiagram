@@ -6,7 +6,9 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by sander on 04/04/17.
@@ -23,6 +25,7 @@ public class RelationView {
         this.anchorpane = anchorpane;
         this.arrowPane = arrowPane;
     }
+
 
     private List<PageBox> createObjList(AnchorPane anchorPane){
 
@@ -59,8 +62,8 @@ public class RelationView {
                             line.setEndY(target.getModel().getRow() + target.getModel().getHeight()/2);
                         }
                     }
+                    line.setId(relation.getType().toLowerCase());
                     arrowPane.getChildren().add(line);
-                    line.setId("relations");
                 }
             }
         }

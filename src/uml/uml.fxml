@@ -6,37 +6,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uml.Companion">
     <children>
-      <BorderPane fx:id="arrowborderpane" prefHeight="200.0" prefWidth="200.0">
-         <center>
-            <AnchorPane fx:id="arrowPane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
-         </center>
+        <BorderPane fx:id="borderpane" prefHeight="400.0" prefWidth="600.0">
          <top>
-             <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
-                 <menus>
-                     <Menu mnemonicParsing="false" text="File">
-                         <items>
-                             <MenuItem mnemonicParsing="false" onAction="#open" text="Open..." />
-                             <MenuItem mnemonicParsing="false" onAction="#closeImage" text="Close" />
-                             <MenuItem mnemonicParsing="false" onAction="#closeProgram" text="Quit" />
-                         </items>
-                     </Menu>
-                 </menus>
-                 <BorderPane.margin>
-                     <Insets bottom="1.0" />
-                 </BorderPane.margin>
-             </MenuBar>
-         </top>
-      </BorderPane>
-        <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
-            <center>
-                <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" BorderPane.alignment="CENTER" />
-            </center>
-         <top>
-                <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+                <MenuBar BorderPane.alignment="CENTER">
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
@@ -51,6 +28,14 @@
                     </BorderPane.margin>
                 </MenuBar>
          </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="arrowPane" minHeight="0.0" stylesheets="@uml.css" />
+                      <AnchorPane fx:id="anchorpane" minHeight="0.0" stylesheets="@uml.css" />
+               </children>
+            </Pane>
+         </center>
         </BorderPane>
     </children>
 </StackPane>
