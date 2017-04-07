@@ -51,7 +51,7 @@ public class Companion {
     public void open(ActionEvent actionEvent) {
         //TODO: clean this up and implement argument passing
         anchorpane.getChildren().clear();
-
+        headpane.getChildren().clear();
         arrowPane.getChildren().clear();
         anchorpane.getStylesheets().add("uml/uml.css");
         arrowPane.getStylesheets().add("uml/uml.css");

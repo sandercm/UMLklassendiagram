@@ -68,9 +68,9 @@ public class RelationView {
                             line.setEndX(x2 + target.getModel().getWidth() / 2);
                             double y2 = target.getModel().getRow();
                             line.setEndY(y2 + target.getModel().getHeight() / 2);
-                            if (x2 >x1 && y2 > y1) {
-                                placeArrowHead(boxModel, target.getModel());
-                            }
+
+                            placeArrowHead(target.getModel(), boxModel);
+
                         }
                     }
                     line.setId(relation.getType().toLowerCase());
@@ -81,15 +81,15 @@ public class RelationView {
     }
     public void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
         Circle circle = new Circle();
-
-
         circle.setRadius(5);
         double x1 = oorsprong.getCol()+oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
         double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
         double y2 = staart.getRow() + staart.getHeight()/2;
-        double x = oorsprong.getCol()+oorsprong.getWidth()/2;
-        double y = (((y2-y1)/(x2-x1))*(x - x1)) + y1;
+        double w = oorsprong.getWidth();
+        double m = ((y2-y1)/(x2-x1));
+        double x = x1 + (w/2);
+        double y = ((x-x1)*m) + y1;
         circle.setCenterY(y);
         circle.setCenterX(x);
         headpane.getChildren().add(circle);
