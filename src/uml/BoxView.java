@@ -41,7 +41,7 @@ public class BoxView {
             //adds the attributes and adds a seperator below the attributes
 
             AttributeView attributeView = new AttributeView(newVbox, model);
-            addToPlane(attributeView.addAtt(), model.getRow(), model.getCol());
+            newVbox = attributeView.addAtt();
 
             //adds a separator
             addSeperator(newVbox);
@@ -50,7 +50,8 @@ public class BoxView {
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
-            //fix this call somehow
+
+            addToPlane(newVbox, model.getRow(), model.getCol());
 
         }
     }

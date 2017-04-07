@@ -26,6 +26,7 @@ public class Companion {
     public AnchorPane anchorpane;
     public AnchorPane arrowPane;
     public Pane containerpane;
+    public AnchorPane headpane;
 
     public File file = null;
     public void setFile(File file){
@@ -64,7 +65,7 @@ public class Companion {
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes(diagram);
         //this passes the anchorpane with vboxes in it to the relationview
-        RelationView relationView = new RelationView(anchorpane, arrowPane);
+        RelationView relationView = new RelationView(anchorpane, arrowPane, headpane);
         relationView.placeArrows();
         borderpane.toFront();
     }
@@ -72,6 +73,7 @@ public class Companion {
     public void closeImage(ActionEvent actionEvent) {
         anchorpane.getChildren().clear();
         arrowPane.getChildren().clear();
+        headpane.getChildren().clear();
     }
 
     public void closeProgram(ActionEvent actionEvent) {
@@ -87,7 +89,7 @@ public class Companion {
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes(diagram);
         //this passes the anchorpane with vboxes in it to the relationview
-        RelationView relationView = new RelationView(anchorpane, arrowPane);
+        RelationView relationView = new RelationView(anchorpane, arrowPane, headpane);
         relationView.placeArrows();
 
     }
