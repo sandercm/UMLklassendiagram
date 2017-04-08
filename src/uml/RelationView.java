@@ -1,15 +1,11 @@
 package uml;
 
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by sander on 04/04/17.
@@ -73,7 +69,7 @@ public class RelationView {
                                 placeArrowHead(target.getModel(), boxModel);
                             }
                             //works in circle
-                            /*
+                            /**
                              * TODO:
                              * make the value evaluate for
                               * absolute.
@@ -81,11 +77,13 @@ public class RelationView {
                              * true for values where m would go above
                              * the corner etc
                              */
-                            if (x2 > x1 && y2 > y1 && ((y2-y1)/(x2-x1))>1){
+                            if (x2 > x1 && y2 > y1 && Math.abs((y2-y1)/(x2-x1))>1){
                                 placeArrowHead2(boxModel, target.getModel());
                             }
 
-                            if (x2 > x1 && y2 >= y1 && ((y2-y1)/(x2-x1))<1){}
+                            if (x2 > x1 && y2 >= y1 && ((y2-y1)/(x2-x1))<1){
+                                placeArrowHead3(boxModel, target.getModel());
+                            }
 
                             if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
 
@@ -121,12 +119,10 @@ public class RelationView {
     public void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
         Circle circle = new Circle();
         circle.setRadius(5);
-        System.out.println("oops");
         double x1 = oorspong.getCol() + oorspong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
         double y1 = oorspong.getRow() + oorspong.getHeight()/2;
         double y2 = staart.getRow() + staart.getHeight()/2;
-        double w = oorspong.getWidth();
         //y is juist
         double y = staart.getRow();
         double m = ((y2-y1)/(x2-x1));
@@ -134,5 +130,16 @@ public class RelationView {
         circle.setCenterX(x);
         circle.setCenterY(y);
         headpane.getChildren().add(circle);
+    }
+    public void placeArrowHead3(VBoxModel oorspong, VBoxModel staart){
+        //oorspring = x1 y1
+        //staart = x2 y2
+        //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
+        double x1 = oorspong.getCol() + oorspong.getWidth()/2;
+        double x2 = staart.getCol() + staart.getWidth()/2;
+        double y1 = oorspong.getRow() + oorspong.getHeight()/2;
+        double y2 = staart.getRow() + staart.getHeight()/2;
+        double m  = ((y2-y1)/(x2-x1));
+
     }
 }

@@ -1,7 +1,5 @@
 package uml;
 
-import javafx.stage.FileChooser;
-
 import javax.xml.bind.JAXBException;
 import java.io.File;
 

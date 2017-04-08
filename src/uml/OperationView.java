@@ -2,9 +2,6 @@ package uml;
 
 import javafx.scene.control.Label;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by sander on 04/04/17.
  * controls the view for the operations
