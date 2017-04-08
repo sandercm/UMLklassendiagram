@@ -84,6 +84,7 @@ public class RelationView {
                             if (x2 > x1 && y2 > y1 && ((y2-y1)/(x2-x1))>1){
                                 placeArrowHead2(boxModel, target.getModel());
                             }
+
                             if (x2 > x1 && y2 >= y1 && ((y2-y1)/(x2-x1))<1){}
 
                             if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
