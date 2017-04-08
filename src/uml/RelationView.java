@@ -68,8 +68,29 @@ public class RelationView {
                             line.setEndX(x2 + target.getModel().getWidth() / 2);
                             double y2 = target.getModel().getRow();
                             line.setEndY(y2 + target.getModel().getHeight() / 2);
+                            //works in circle
+                            if (x2 < x1 && y2>=y1) {
+                                placeArrowHead(target.getModel(), boxModel);
+                            }
+                            //works in circle
+                            /*
+                             * TODO:
+                             * make the value evaluate for
+                              * absolute.
+                             * fix for non squares
+                             * true for values where m would go above
+                             * the corner etc
+                             */
+                            if (x2 > x1 && y2 > y1 && ((y2-y1)/(x2-x1))>1){
+                                placeArrowHead2(boxModel, target.getModel());
+                            }
+                            if (x2 > x1 && y2 >= y1 && ((y2-y1)/(x2-x1))<1){}
 
-                            placeArrowHead(target.getModel(), boxModel);
+                            if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
+
+                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1){}
+
+                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
 
                         }
                     }
@@ -79,6 +100,7 @@ public class RelationView {
             }
         }
     }
+    //option 1 is bad
     public void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
         Circle circle = new Circle();
         circle.setRadius(5);
@@ -92,6 +114,24 @@ public class RelationView {
         double y = ((x-x1)*m) + y1;
         circle.setCenterY(y);
         circle.setCenterX(x);
+        headpane.getChildren().add(circle);
+    }
+    //x2 > x1 && y2 > y1
+    public void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
+        Circle circle = new Circle();
+        circle.setRadius(5);
+        System.out.println("oops");
+        double x1 = oorspong.getCol() + oorspong.getWidth()/2;
+        double x2 = staart.getCol() + staart.getWidth()/2;
+        double y1 = oorspong.getRow() + oorspong.getHeight()/2;
+        double y2 = staart.getRow() + staart.getHeight()/2;
+        double w = oorspong.getWidth();
+        //y is juist
+        double y = staart.getRow();
+        double m = ((y2-y1)/(x2-x1));
+        double x = ((y - y1)/m) + x1;
+        circle.setCenterX(x);
+        circle.setCenterY(y);
         headpane.getChildren().add(circle);
     }
 }
