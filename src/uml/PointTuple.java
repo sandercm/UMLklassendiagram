@@ -4,8 +4,8 @@ package uml;
  * Created by sander on 07/04/17.
  */
 public class PointTuple {
-    double x;
-    double y;
+    private double x;
+    private double y;
     public PointTuple(double x, double y){
         this.x = x;
         this.y = y;

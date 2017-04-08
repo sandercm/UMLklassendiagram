@@ -12,9 +12,9 @@ import java.util.List;
  * this class controls the relation view
  */
 public class RelationView {
-    public AnchorPane anchorpane;
-    public AnchorPane arrowPane;
-    public AnchorPane headpane;
+    private final AnchorPane anchorpane;
+    private final AnchorPane arrowPane;
+    private final AnchorPane headpane;
 
     public RelationView(AnchorPane anchorpane, AnchorPane arrowPane, AnchorPane headpane){
         this.anchorpane = anchorpane;
@@ -100,7 +100,7 @@ public class RelationView {
         }
     }
     //option 1 is bad
-    public void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
+    private void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
         Circle circle = new Circle();
         circle.setRadius(5);
         double x1 = oorsprong.getCol()+oorsprong.getWidth()/2;
@@ -116,7 +116,7 @@ public class RelationView {
         headpane.getChildren().add(circle);
     }
     //x2 > x1 && y2 > y1
-    public void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
+    private void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
         Circle circle = new Circle();
         circle.setRadius(5);
         double x1 = oorspong.getCol() + oorspong.getWidth()/2;
@@ -131,7 +131,7 @@ public class RelationView {
         circle.setCenterY(y);
         headpane.getChildren().add(circle);
     }
-    public void placeArrowHead3(VBoxModel oorspong, VBoxModel staart){
+    private void placeArrowHead3(VBoxModel oorspong, VBoxModel staart){
         //oorspring = x1 y1
         //staart = x2 y2
         //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1

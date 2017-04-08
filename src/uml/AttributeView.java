@@ -7,8 +7,8 @@ import javafx.scene.control.Label;
  * this class controls the attribute view
  */
 public class AttributeView {
-    private PageBox vBox;
-    private VBoxModel boxModel;
+    private final PageBox vBox;
+    private final VBoxModel boxModel;
 
     public AttributeView(PageBox vBox, VBoxModel boxModel) {
         this.vBox = vBox;
@@ -18,7 +18,7 @@ public class AttributeView {
 
     public PageBox addAtt() {
         if (boxModel.getAttributes() != null) {
-            String attributes = "";
+            StringBuilder attributes = new StringBuilder();
             for (Attribute att : boxModel.getAttributes()
                     ) {
                 /**
@@ -27,11 +27,11 @@ public class AttributeView {
                  * ~	Package
                  */
                 String vis = BoxView.getVis(att.getVisibility());
-                attributes += vis +att.getName() + " : " +att.getType() + "\n";
+                attributes.append(vis).append(att.getName()).append(" : ").append(att.getType()).append("\n");
 
 
             }
-            Label label = new Label(attributes);
+            Label label = new Label(attributes.toString());
             label.setId("attributes");
             vBox.getChildren().add(label);
         }

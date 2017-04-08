@@ -7,8 +7,8 @@ import javafx.scene.control.Label;
  * controls the view for the operations
  */
 public class OperationView {
-    private PageBox vBox;
-    private VBoxModel boxModel;
+    private final PageBox vBox;
+    private final VBoxModel boxModel;
 
     public OperationView(PageBox vBox, VBoxModel boxModel) {
         this.vBox = vBox;

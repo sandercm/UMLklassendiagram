@@ -18,13 +18,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Companion {
-    public BorderPane borderpane;
-    public AnchorPane anchorpane;
-    public AnchorPane arrowPane;
-    public Pane containerpane;
-    public AnchorPane headpane;
+    private BorderPane borderpane;
+    private AnchorPane anchorpane;
+    private AnchorPane arrowPane;
+    private Pane containerpane;
+    private AnchorPane headpane;
 
-    public File file = null;
+    private File file = null;
     public void setFile(File file){
         this.file = file;
     }
