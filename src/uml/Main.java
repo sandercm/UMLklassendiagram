@@ -30,6 +30,11 @@ public class Main extends Application {
         Companion comp = loader.getController();
         Parameters params = getParameters();
         List<String> list = params.getRaw();
+        /**
+         * there is a bug with opening from command line where something
+         * messes up the the cor of the boxes
+         * TODO:fix this
+         */
         if (list.size() == 1) {
             file = new File(list.get(0));
             comp.setFile(file);

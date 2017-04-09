@@ -4,7 +4,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,8 +1,11 @@
 package uml;
 
+
+import javafx.geometry.Point2D;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
+import javafx.scene.shape.LineTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
 import javafx.scene.shape.Polygon;
 
 import java.util.ArrayList;
@@ -118,12 +121,112 @@ public class RelationView {
                             }
                         }
                     }
-                    Arrow arrow = new Arrow(originX,originY,targetX,targetY,relation.getType().toLowerCase());
-                    arrow.setId(relation.getType().toLowerCase());
-                    arrowPane.getChildren().add(arrow);
+                    Path path = new Path();
+                    Point2D begin = new Point2D(originX, originY);
+                    Point2D ori = new Point2D(targetX, targetY);
+                    //cor of the point 0.1 away from the end
+                    //path.setId(relation.getType().toLowerCase());
+                    path.getElements().add(new MoveTo(originX, originY));
+
+                    createArrowHeadPath(begin, ori, relation.getType(), path);
+
+
+
+                    //arrowPane.getChildren().add(polyline);
+
+                    //arrowPane.getChildren().add(arrow);
                 }
             }
         }
+    }
+    private void createArrowHeadPath(Point2D begin, Point2D ori, String style, Path path){
+        /**
+         * has to be moved to a factory structure
+         * and I might need to replace all arrow path with polylines
+         */
+        Point2D endIndentCor = eval(begin, ori, 0.9);
+        Point2D begincor = perpenIndent(begin,ori,endIndentCor,5);
+        Point2D endcor = perpenIndent(begin,ori,endIndentCor,-5);
+        Path arrow = new Path();
+        if (style.equals("association")){
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(begincor.getX(), begincor.getY()));
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(endcor.getX(), endcor.getY()));
+            path.getElements().add(new LineTo(ori.getX(), ori.getY()));
+        }
+        if (style.equals("inheritance")){
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(begincor.getX(), begincor.getY()));
+            arrow.getElements().add(new LineTo(endcor.getX(), endcor.getY()));
+            arrow.getElements().add(new LineTo(ori.getX(), ori.getY()));
+            path.getElements().add(new LineTo(endIndentCor.getX(), endIndentCor.getY()));
+        }
+        if (style.equals("realization") || style.equals("implementation")){
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(begincor.getX(), begincor.getY()));
+            arrow.getElements().add(new LineTo(endcor.getX(), endcor.getY()));
+            arrow.getElements().add(new LineTo(ori.getX(), ori.getY()));
+            path.setId("realization");
+            path.getElements().add(new LineTo(endIndentCor.getX(), endIndentCor.getY()));
+        }
+        if (style.equals("dependency")){
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(begincor.getX(), begincor.getY()));
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(endcor.getX(), endcor.getY()));
+            path.getElements().add(new LineTo(ori.getX(), ori.getY()));
+            path.setId("dependency");
+        }
+        if (style.equals("aggregation")){
+            Point2D backCor = eval(begin, ori, 0.8);
+            arrow.getElements().add(new MoveTo(ori.getX(), ori.getY()));
+            arrow.getElements().add(new LineTo(begincor.getX(), begincor.getY()));
+            arrow.getElements().add(new LineTo(backCor.getX(), backCor.getY()));
+            arrow.getElements().add(new LineTo(endcor.getX(), endcor.getY()));
+            arrow.getElements().add(new LineTo(ori.getX(), ori.getY()));
+            path.getElements().add(new LineTo(backCor.getX(), backCor.getY()));
+
+        }
+        if (style.equals("composition")){
+            Point2D backCor = eval(begin, ori, 0.8);
+            Polygon polygon = new Polygon();
+            polygon.getPoints().addAll(ori.getX(), ori.getY(),begincor.getX(), begincor.getY(),
+                    backCor.getX(), backCor.getY(), endcor.getX(), endcor.getY(),ori.getX(), ori.getY());
+            path.getElements().add(new LineTo(backCor.getX(), backCor.getY()));
+            arrowPane.getChildren().add(polygon);
+        }
+
+        arrowPane.getChildren().addAll(path, arrow);
+    }
+
+    /**
+     *
+     * @param begin
+     * start cor of parametric line
+     * @param end
+     * end cor of parametric line
+     * @param t
+     * between 0 and 1
+     * @return
+     * returns the point
+     */
+    //Find the parametric equations for the line through the points (3,2) and (4,6) so that when t = 0 we are at the point (3,2) and when t = 1 we are at the point (4,6).
+    private Point2D eval(Point2D begin, Point2D end, double t){
+        double first = ((1 - t) * begin.getX()) + (end.getX() * t);
+        double second = ((1 - t) * begin.getY()) + (end.getY() * t);
+        return new Point2D(first, second);
+    }
+    private Point2D perpenIndent(Point2D begin, Point2D end, Point2D snijpunt, double t){
+        double reciprocal = -1 *( 1/((end.getY()-begin.getY())/(end.getX()-begin.getX())));
+        if (((end.getY()-begin.getY())/(end.getX()-begin.getX()) == 0)){
+            return new Point2D( snijpunt.getX()+t, begin.getY() + t);
+        }
+        double b = snijpunt.getY() - reciprocal*snijpunt.getX();
+        // loodrecht functie door snijpunt y = reciprocal * x + b
+        // neem de waarde waar x = snijpunt + t
+        double y = reciprocal * (snijpunt.getX()+t) + b;
+        return new Point2D(snijpunt.getX()+t, y);
     }
 
     /**
@@ -131,9 +234,8 @@ public class RelationView {
      * @param oorsprong
      * where the arrow head appears
      * @param staart
-     * the start of the line of the arrow
-     * below you will find
-     * ungodly math fuckery
+     * using the intersection of 2 functions to find the point where the line meets the box
+     * need to change this to a factory
      */
     private PointTuple placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
         double x1 = oorsprong.getCol()+oorsprong.getWidth()/2;
@@ -144,8 +246,8 @@ public class RelationView {
         double m = ((y2-y1)/(x2-x1));
         double x = x1 + (w/2);
         double y = ((x-x1)*m) + y1;
-        Circle circle = new Circle(x,y,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
     }
@@ -160,8 +262,8 @@ public class RelationView {
         double y = staart.getRow();
         double m = ((y2-y1)/(x2-x1));
         double x = ((y - y1)/m) + x1;
-        Circle circle = new Circle(x,y,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
     }
@@ -176,8 +278,8 @@ public class RelationView {
         double m  = ((y2-y1)/(x2-x1));
         double x = staart.getCol();
         double y = ((m * x) - (m * x1)) + y1;
-        Circle circle = new Circle(x, y ,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
 
@@ -191,8 +293,8 @@ public class RelationView {
         double m  = ((y2-y1)/(x2-x1));
         double x = staart.getCol();
         double y = m*x - m*x1 + y1;
-        Circle circle = new Circle(x, y ,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
     }
@@ -205,8 +307,8 @@ public class RelationView {
         double m  = ((y2-y1)/(x2-x1));
         double y = staart.getRow()+staart.getHeight();
         double x = (y - y1 + (m*x1))/m;
-        Circle circle = new Circle(x, y ,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
     }
@@ -219,8 +321,8 @@ public class RelationView {
         double m  = ((y2-y1)/(x2-x1));
         double x = staart.getCol()+staart.getWidth();
         double y = m*x - m*x1 + y1;
-        Circle circle = new Circle(x, y ,5);
-        headpane.getChildren().add(circle);
+
+
         PointTuple punten = new PointTuple(x, y);
         return punten;
     }
