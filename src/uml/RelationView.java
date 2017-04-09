@@ -60,44 +60,57 @@ public class RelationView {
                     line.setStartY(y1 + boxModel.getHeight() / 2);
                     for (PageBox target : boxes
                             ) {
-                        //target is where the arrow has to be placed
                         if (relation.getWith().equals(target.getModel().getName())) {
                             double x2 = target.getModel().getCol();
-                            line.setEndX(x2 + target.getModel().getWidth() / 2);
                             double y2 = target.getModel().getRow();
-                            line.setEndY(y2 + target.getModel().getHeight() / 2);
-                            //works in circle
+
                             /**
-                             * massive work in progress below this line
+                             * first it takes the increase per box width
+                             * then it compares the cor of the 2 boxes
+                             * then it looks of the increase is higher or lower than the boxRatio
+                             * to determine if it goes above or below the corner
                              */
+                            //TODO:PUT THIS IN A FACTORY STRUCTURE
                             double boxRatio = target.getModel().getHeight()/target.getModel().getWidth();
 
                             if (x2 < x1 && y2>=y1) {
-                                placeArrowHead(target.getModel(), boxModel);
+                                PointTuple punten = placeArrowHead(target.getModel(), boxModel);
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
-                            //TODO: NEED TO CHANGE THE Math.abs((y2-y1)/(x2-x1) TO BE THE RATIO OF THE BOX INSTEAD OF 1
-
                             if (x2 > x1 && y2 >= y1 && Math.abs((y2-y1)/(x2-x1))>boxRatio){
-                                placeArrowHead2(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead2(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
 
                             if (x2 > x1 && y2 >= y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                placeArrowHead3(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead3(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
 
                             if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                placeArrowHead4(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead4(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
 
                             if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
-                                placeArrowHead5(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead5(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
 
                             if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                placeArrowHead6(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead6(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
                             if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
-                                placeArrowHead5(boxModel, target.getModel());
+                                PointTuple punten = placeArrowHead5(boxModel, target.getModel());
+                                line.setEndX(punten.getX());
+                                line.setEndY(punten.getY());
                             }
 
                         }
@@ -112,12 +125,13 @@ public class RelationView {
     /**
      *
      * @param oorsprong
+     * where the arrow head appears
      * @param staart
+     * the start of the line of the arrow
      * below you will find
      * ungodly math fuckery
      */
-    //option 1 is bad
-    private void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
+    private PointTuple placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
         double x1 = oorsprong.getCol()+oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
         double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
@@ -128,9 +142,11 @@ public class RelationView {
         double y = ((x-x1)*m) + y1;
         Circle circle = new Circle(x,y,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
     }
     //x2 > x1 && y2 > y1
-    private void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
+    private PointTuple placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
 
         double x1 = oorspong.getCol() + oorspong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
@@ -142,8 +158,10 @@ public class RelationView {
         double x = ((y - y1)/m) + x1;
         Circle circle = new Circle(x,y,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
     }
-    private void placeArrowHead3(VBoxModel oorsprong, VBoxModel staart){
+    private PointTuple placeArrowHead3(VBoxModel oorsprong, VBoxModel staart){
         //oorspring = x1 y1
         //staart = x2 y2
         //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
@@ -156,9 +174,11 @@ public class RelationView {
         double y = ((m * x) - (m * x1)) + y1;
         Circle circle = new Circle(x, y ,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
 
     }
-    private void placeArrowHead4(VBoxModel oorsprong, VBoxModel staart){
+    private PointTuple placeArrowHead4(VBoxModel oorsprong, VBoxModel staart){
         //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
         double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
@@ -169,8 +189,10 @@ public class RelationView {
         double y = m*x - m*x1 + y1;
         Circle circle = new Circle(x, y ,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
     }
-    private void placeArrowHead5(VBoxModel oorsprong, VBoxModel staart){
+    private PointTuple placeArrowHead5(VBoxModel oorsprong, VBoxModel staart){
         //x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1
         double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
@@ -181,8 +203,10 @@ public class RelationView {
         double x = (y - y1 + (m*x1))/m;
         Circle circle = new Circle(x, y ,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
     }
-    private void placeArrowHead6(VBoxModel oorsprong, VBoxModel staart){
+    private PointTuple placeArrowHead6(VBoxModel oorsprong, VBoxModel staart){
         //x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
         double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
@@ -193,5 +217,7 @@ public class RelationView {
         double y = m*x - m*x1 + y1;
         Circle circle = new Circle(x, y ,5);
         headpane.getChildren().add(circle);
+        PointTuple punten = new PointTuple(x, y);
+        return punten;
     }
 }
