@@ -3,6 +3,7 @@ package uml;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,11 +54,13 @@ public class RelationView {
                 for (Relation relation : boxModel.getRelations()
                         ) {
                     //boxmodel is the origin of the arrow
-                    Line line = new Line();
+
+                    double targetX = 0;
+                    double targetY = 0;
                     double x1 = boxModel.getCol();
-                    line.setStartX(x1 + boxModel.getWidth() / 2);
                     double y1 = boxModel.getRow();
-                    line.setStartY(y1 + boxModel.getHeight() / 2);
+                    double originX = x1 + boxModel.getWidth() / 2;
+                    double originY = y1 + boxModel.getHeight() / 2;
                     for (PageBox target : boxes
                             ) {
                         if (relation.getWith().equals(target.getModel().getName())) {
@@ -72,51 +75,52 @@ public class RelationView {
                              */
                             //TODO:PUT THIS IN A FACTORY STRUCTURE
                             double boxRatio = target.getModel().getHeight()/target.getModel().getWidth();
+                            PointTuple punten = new PointTuple(0,0);
 
                             if (x2 < x1 && y2>=y1) {
-                                PointTuple punten = placeArrowHead(target.getModel(), boxModel);
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead(target.getModel(), boxModel);
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
                             if (x2 > x1 && y2 >= y1 && Math.abs((y2-y1)/(x2-x1))>boxRatio){
-                                PointTuple punten = placeArrowHead2(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead2(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
 
                             if (x2 > x1 && y2 >= y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                PointTuple punten = placeArrowHead3(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead3(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
 
                             if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                PointTuple punten = placeArrowHead4(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead4(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
 
                             if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
-                                PointTuple punten = placeArrowHead5(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead5(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
 
                             if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
-                                PointTuple punten = placeArrowHead6(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead6(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
                             if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
-                                PointTuple punten = placeArrowHead5(boxModel, target.getModel());
-                                line.setEndX(punten.getX());
-                                line.setEndY(punten.getY());
+                                punten = placeArrowHead5(boxModel, target.getModel());
+                                targetX = punten.getX();
+                                targetY = punten.getY();
                             }
-
                         }
                     }
-                    line.setId(relation.getType().toLowerCase());
-                    arrowPane.getChildren().add(line);
+                    Arrow arrow = new Arrow(originX,originY,targetX,targetY,relation.getType().toLowerCase());
+                    arrow.setId(relation.getType().toLowerCase());
+                    arrowPane.getChildren().add(arrow);
                 }
             }
         }
