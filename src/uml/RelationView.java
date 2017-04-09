@@ -71,15 +71,8 @@ public class RelationView {
                             if (x2 < x1 && y2>=y1) {
                                 placeArrowHead(target.getModel(), boxModel);
                             }
-                            //works in circle
-                            /**
-                             * TODO:
-                             * make the value evaluate for
-                              * absolute.
-                             * fix for non squares
-                             * true for values where m would go above
-                             * the corner etc
-                             */
+                            //TODO: NEED TO CHANGE THE Math.abs((y2-y1)/(x2-x1) TO BE THE RATIO OF THE BOX INSTEAD OF 1
+
                             if (x2 > x1 && y2 > y1 && Math.abs((y2-y1)/(x2-x1))>1){
                                 placeArrowHead2(boxModel, target.getModel());
                             }
@@ -89,12 +82,16 @@ public class RelationView {
                             }
 
                             if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){
-
+                                placeArrowHead4(boxModel, target.getModel());
                             }
 
-                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1){}
+                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1){
+                                placeArrowHead5(boxModel, target.getModel());
+                            }
 
-                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
+                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){
+                                placeArrowHead6(boxModel, target.getModel());
+                            }
 
                         }
                     }
@@ -139,19 +136,46 @@ public class RelationView {
         Circle circle = new Circle(x,y,5);
         headpane.getChildren().add(circle);
     }
-    private void placeArrowHead3(VBoxModel oorspong, VBoxModel staart){
+    private void placeArrowHead3(VBoxModel oorsprong, VBoxModel staart){
         //oorspring = x1 y1
         //staart = x2 y2
         //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
-        double x1 = oorspong.getCol() + oorspong.getWidth()/2;
+        double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
-        double y1 = oorspong.getRow() + oorspong.getHeight()/2;
+        double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
         double y2 = staart.getRow() + staart.getHeight()/2;
         double m  = ((y2-y1)/(x2-x1));
         double x = staart.getCol();
         double y = ((m * x) - (m * x1)) + y1;
         Circle circle = new Circle(x, y ,5);
         headpane.getChildren().add(circle);
+
+    }
+    private void placeArrowHead4(VBoxModel oorsprong, VBoxModel staart){
+        //x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
+        double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
+        double x2 = staart.getCol() + staart.getWidth()/2;
+        double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
+        double y2 = staart.getRow() + staart.getHeight()/2;
+        double m  = ((y2-y1)/(x2-x1));
+        double x = staart.getCol();
+        double y = m*x - m*x1 + y1;
+        Circle circle = new Circle(x, y ,5);
+        headpane.getChildren().add(circle);
+    }
+    private void placeArrowHead5(VBoxModel oorsprong, VBoxModel staart){
+        //x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1
+        double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
+        double x2 = staart.getCol() + staart.getWidth()/2;
+        double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
+        double y2 = staart.getRow() + staart.getHeight()/2;
+        double m  = ((y2-y1)/(x2-x1));
+        double y = staart.getRow()+staart.getHeight();
+        double x = (y - y1 + (m*x1))/m;
+        Circle circle = new Circle(x, y ,5);
+        headpane.getChildren().add(circle);
+    }
+    private void placeArrowHead6(VBoxModel oorsprong, VBoxModel staart){
 
     }
 }
