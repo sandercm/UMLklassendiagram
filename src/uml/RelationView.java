@@ -176,6 +176,15 @@ public class RelationView {
         headpane.getChildren().add(circle);
     }
     private void placeArrowHead6(VBoxModel oorsprong, VBoxModel staart){
-
+        //x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1
+        double x1 = oorsprong.getCol() + oorsprong.getWidth()/2;
+        double x2 = staart.getCol() + staart.getWidth()/2;
+        double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
+        double y2 = staart.getRow() + staart.getHeight()/2;
+        double m  = ((y2-y1)/(x2-x1));
+        double x = staart.getCol()+staart.getWidth();
+        double y = m*x - m*x1 + y1;
+        Circle circle = new Circle(x, y ,5);
+        headpane.getChildren().add(circle);
     }
 }
