@@ -58,7 +58,6 @@ public class Companion {
         File file = chooser.showOpenDialog(null);
 
         Diagram diagram = unmarshaller.unmarshall(file);
-        System.out.println(diagram);
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes(diagram);
         //this passes the anchorpane with vboxes in it to the relationview

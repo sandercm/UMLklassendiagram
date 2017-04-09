@@ -52,6 +52,7 @@ public class RelationView {
             if (boxModel.getRelations() != null) {
                 for (Relation relation : boxModel.getRelations()
                         ) {
+                    //boxmodel is the origin of the arrow
                     Line line = new Line();
                     double x1 = boxModel.getCol();
                     line.setStartX(x1 + boxModel.getWidth() / 2);
@@ -59,6 +60,7 @@ public class RelationView {
                     line.setStartY(y1 + boxModel.getHeight() / 2);
                     for (PageBox target : boxes
                             ) {
+                        //target is where the arrow has to be placed
                         if (relation.getWith().equals(target.getModel().getName())) {
                             double x2 = target.getModel().getCol();
                             line.setEndX(x2 + target.getModel().getWidth() / 2);
@@ -68,29 +70,34 @@ public class RelationView {
                             /**
                              * massive work in progress below this line
                              */
+                            double boxRatio = target.getModel().getHeight()/target.getModel().getWidth();
+
                             if (x2 < x1 && y2>=y1) {
                                 placeArrowHead(target.getModel(), boxModel);
                             }
                             //TODO: NEED TO CHANGE THE Math.abs((y2-y1)/(x2-x1) TO BE THE RATIO OF THE BOX INSTEAD OF 1
 
-                            if (x2 > x1 && y2 > y1 && Math.abs((y2-y1)/(x2-x1))>1){
+                            if (x2 > x1 && y2 >= y1 && Math.abs((y2-y1)/(x2-x1))>boxRatio){
                                 placeArrowHead2(boxModel, target.getModel());
                             }
 
-                            if (x2 > x1 && y2 >= y1 && ((y2-y1)/(x2-x1))<1){
+                            if (x2 > x1 && y2 >= y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
                                 placeArrowHead3(boxModel, target.getModel());
                             }
 
-                            if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){
+                            if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
                                 placeArrowHead4(boxModel, target.getModel());
                             }
 
-                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1){
+                            if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
                                 placeArrowHead5(boxModel, target.getModel());
                             }
 
-                            if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){
+                            if (x2 < x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))<boxRatio){
                                 placeArrowHead6(boxModel, target.getModel());
+                            }
+                            if (x2 > x1 && y2 < y1 && Math.abs(((y2-y1)/(x2-x1)))>boxRatio){
+                                placeArrowHead5(boxModel, target.getModel());
                             }
 
                         }
