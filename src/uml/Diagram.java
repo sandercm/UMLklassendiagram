@@ -10,9 +10,9 @@ import java.util.List;
 @XmlRootElement
 public class Diagram {
 
-    private List<uml.Box> box;
+    public List<uml.Box> box;
 
-    @XmlElement(name = "Box")
+    @XmlElement(name = "box")
     public List<uml.Box> getList() {
         return box;
     }

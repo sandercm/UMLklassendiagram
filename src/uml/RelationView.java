@@ -65,6 +65,9 @@ public class RelationView {
                             double y2 = target.getModel().getRow();
                             line.setEndY(y2 + target.getModel().getHeight() / 2);
                             //works in circle
+                            /**
+                             * massive work in progress below this line
+                             */
                             if (x2 < x1 && y2>=y1) {
                                 placeArrowHead(target.getModel(), boxModel);
                             }
@@ -85,7 +88,9 @@ public class RelationView {
                                 placeArrowHead3(boxModel, target.getModel());
                             }
 
-                            if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){}
+                            if (x2 > x1 && y2 < y1 && ((y2-y1)/(x2-x1))<1){
+
+                            }
 
                             if (x2 < x1 && y2 < y1 && ((y2-y1)/(x2-x1))>1){}
 
@@ -99,10 +104,16 @@ public class RelationView {
             }
         }
     }
+
+    /**
+     *
+     * @param oorsprong
+     * @param staart
+     * below you will find
+     * ungodly math fuckery
+     */
     //option 1 is bad
     private void placeArrowHead(VBoxModel oorsprong, VBoxModel staart){
-        Circle circle = new Circle();
-        circle.setRadius(5);
         double x1 = oorsprong.getCol()+oorsprong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
         double y1 = oorsprong.getRow() + oorsprong.getHeight()/2;
@@ -111,14 +122,12 @@ public class RelationView {
         double m = ((y2-y1)/(x2-x1));
         double x = x1 + (w/2);
         double y = ((x-x1)*m) + y1;
-        circle.setCenterY(y);
-        circle.setCenterX(x);
+        Circle circle = new Circle(x,y,5);
         headpane.getChildren().add(circle);
     }
     //x2 > x1 && y2 > y1
     private void placeArrowHead2(VBoxModel oorspong, VBoxModel staart){
-        Circle circle = new Circle();
-        circle.setRadius(5);
+
         double x1 = oorspong.getCol() + oorspong.getWidth()/2;
         double x2 = staart.getCol() + staart.getWidth()/2;
         double y1 = oorspong.getRow() + oorspong.getHeight()/2;
@@ -127,8 +136,7 @@ public class RelationView {
         double y = staart.getRow();
         double m = ((y2-y1)/(x2-x1));
         double x = ((y - y1)/m) + x1;
-        circle.setCenterX(x);
-        circle.setCenterY(y);
+        Circle circle = new Circle(x,y,5);
         headpane.getChildren().add(circle);
     }
     private void placeArrowHead3(VBoxModel oorspong, VBoxModel staart){
@@ -140,6 +148,10 @@ public class RelationView {
         double y1 = oorspong.getRow() + oorspong.getHeight()/2;
         double y2 = staart.getRow() + staart.getHeight()/2;
         double m  = ((y2-y1)/(x2-x1));
+        double x = staart.getCol();
+        double y = ((m * x) - (m * x1)) + y1;
+        Circle circle = new Circle(x, y ,5);
+        headpane.getChildren().add(circle);
 
     }
 }

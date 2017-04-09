@@ -18,11 +18,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Companion {
-    private BorderPane borderpane;
-    private AnchorPane anchorpane;
-    private AnchorPane arrowPane;
-    private Pane containerpane;
-    private AnchorPane headpane;
+    public BorderPane borderpane;
+    public AnchorPane anchorpane;
+    public AnchorPane arrowPane;
+    public Pane containerpane;
+    public AnchorPane headpane;
 
     private File file = null;
     public void setFile(File file){
@@ -45,7 +45,7 @@ public class Companion {
      */
 
     public void open(ActionEvent actionEvent) {
-        //TODO: clean this up and implement argument passing
+        //TODO: clean this up
         anchorpane.getChildren().clear();
         headpane.getChildren().clear();
         arrowPane.getChildren().clear();
@@ -58,6 +58,7 @@ public class Companion {
         File file = chooser.showOpenDialog(null);
 
         Diagram diagram = unmarshaller.unmarshall(file);
+        System.out.println(diagram);
         BoxView boxview = new BoxView(anchorpane);
         boxview.setBoxes(diagram);
         //this passes the anchorpane with vboxes in it to the relationview

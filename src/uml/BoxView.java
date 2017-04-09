@@ -13,20 +13,20 @@ import java.util.Map;
  * this file is the view for the boxes
  */
 public class BoxView {
-    private AnchorPane anchorpane;
-    public BoxView(File file){}
+    public AnchorPane anchorpane;
     public BoxView(AnchorPane anchorpane) {
         this.anchorpane = anchorpane;
     }
 
 
     public void setBoxes(Diagram diagram) {
-
         for (Box box : diagram.getList()
                 ) {
+
             //sets the model for the box
             VBoxModel model = new VBoxModel(box);
             PageBox newVbox = new PageBox(4);
+
             newVbox.setModel(model);
             newVbox.setPrefWidth(model.getWidth());
             newVbox.setId("VBox");

@@ -28,7 +28,7 @@ public class Attribute {
         return scope;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="scope")
     public void setScope(String scope) {
         this.scope = scope;
     }
@@ -37,7 +37,7 @@ public class Attribute {
         return visibility;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="visibility")
     public void setVisibility(String visibility) {
         this.visibility = visibility;
     }
@@ -46,7 +46,7 @@ public class Attribute {
         return name;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="name")
     public void setName(String name) {
         this.name = name;
     }
@@ -55,7 +55,7 @@ public class Attribute {
         return type;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="type")
     public void setType(String type) {
         this.type = type;
     }
