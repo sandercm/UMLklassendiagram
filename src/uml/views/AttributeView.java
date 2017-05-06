@@ -35,11 +35,13 @@ public class AttributeView {
 
             }
             Label label = new Label(attributes.toString());
+            label.setOnMouseClicked(event -> Companion.updateAttributes(label, boxModel));
             label.setId("attributes");
             vBox.getChildren().add(label);
         }
         else{
             Label label = new Label("");
+            label.setOnMouseClicked(event -> Companion.updateAttributes(label, boxModel));
             vBox.getChildren().add(label);
             label.setId("attributes");
         }

@@ -1,16 +1,20 @@
-package uml;
+package uml.views;
 
+import com.sun.javafx.scene.control.skin.LabeledText;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import uml.FXML.Diagram;
 import uml.FXML.Unmarshaller;
+import uml.VBoxModel;
 import uml.views.BoxView;
 import uml.views.RelationView;
 
@@ -20,6 +24,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class Companion {
     public BorderPane borderpane;
@@ -29,7 +36,8 @@ public class Companion {
     public AnchorPane headpane;
 
     private File file = null;
-    public void setFile(File file){
+
+    public void setFile(File file) {
         this.file = file;
     }
 
@@ -81,7 +89,7 @@ public class Companion {
     }
 
     @FXML
-    public void drawArg(){
+    public void drawArg() {
         anchorpane.getStylesheets().add("uml/uml.css");
         arrowPane.getStylesheets().add("uml/uml.css");
         Unmarshaller unmarshaller = new Unmarshaller();
@@ -93,6 +101,7 @@ public class Companion {
         relationView.placeArrows();
 
     }
+
     @FXML
     public void takeScreenshot(String path) throws IOException {
         containerpane.applyCss();
@@ -100,9 +109,39 @@ public class Companion {
         WritableImage snapshot = containerpane.getScene().snapshot(null);
         BufferedImage outputImage = SwingFXUtils.fromFXImage(snapshot, null);
         File outFile = new File(path + "/" + "screenshot.png");
-        ImageIO.write(outputImage,"png", outFile);
+        ImageIO.write(outputImage, "png", outFile);
 
     }
 
 
+    @FXML
+    public static void updateName(Label label, VBoxModel model) {
+        TextInputDialog inputDialog = new TextInputDialog();
+        inputDialog.setHeaderText(null);
+        inputDialog.setTitle("new name");
+        inputDialog.setContentText("enter new name: ");
+        Optional<String> string = inputDialog.showAndWait();
+        string.ifPresent(name -> {
+            label.setText(name);
+            model.setName(name);
+        });
+    }
+    @FXML
+    static void updateAttributes(Label label, VBoxModel model){
+        StringBuilder attribute = new StringBuilder();
+        TextInputDialog inputDialog = new TextInputDialog();
+        inputDialog.setHeaderText(null);
+        inputDialog.setTitle("new attribute");
+        List<String> choices = new ArrayList<>();
+        choices.add("public");
+        choices.add("private");
+        choices.add("protected");
+        choices.add("package");
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("public", choices);
+        dialog.setTitle("scope");
+        dialog.setHeaderText(null);
+        dialog.setContentText("Choose your scope:");
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(letter -> System.out.println("Your choice: " + letter));
+    }
 }

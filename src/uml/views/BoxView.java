@@ -1,6 +1,8 @@
 package uml.views;
 
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import uml.FXML.Box;
@@ -28,12 +30,11 @@ public class BoxView {
 
             //sets the model for the box
             VBoxModel model = new VBoxModel(box);
-            PageBox newVbox = new PageBox(4);
 
+            PageBox newVbox = new PageBox(4);
             newVbox.setModel(model);
             newVbox.setPrefWidth(model.getWidth());
             newVbox.setId("VBox");
-
 
             //adds the name to the box and adds a seperator below the name
             setTitle(newVbox, model);
@@ -51,13 +52,18 @@ public class BoxView {
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
-
+            ContextMenu contextMenu = new ContextMenu();
+            MenuItem item1 = new MenuItem("Change Title");
+            MenuItem item2 = new MenuItem("Add Attribute");
+            contextMenu.getItems().addAll(item1, item2);
+            newVbox.setOnContextMenuRequested();
             addToPlane(newVbox, model.getRow(), model.getCol());
 
         }
     }
     private void setTitle(PageBox newVbox, VBoxModel model){
         Label title = new Label(model.getName());
+        title.setOnMouseClicked(event -> Companion.updateName(title, model));
         newVbox.getChildren().add(title);
         title.setPrefWidth(model.getWidth());
         title.setId("topTitle");
@@ -75,7 +81,7 @@ public class BoxView {
         AnchorPane.setTopAnchor(vbox, row);
         AnchorPane.setLeftAnchor(vbox, col);
     }
-    public static String getVis(String string){
+    static String getVis(String string){
         Map<String, String> visibilty = new HashMap<>();
         visibilty.put("private", "-");
         visibilty.put("public", "+");

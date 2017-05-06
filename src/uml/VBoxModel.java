@@ -2,6 +2,11 @@ package uml;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableStringValue;
+import sun.java2d.pipe.SpanShapeRenderer;
 import uml.FXML.Attribute;
 import uml.FXML.Box;
 import uml.FXML.Operation;
@@ -16,34 +21,34 @@ import java.util.List;
 public class VBoxModel implements Observable {
 
     //boxes -> relations, attributes and operations
-    private String name;
+    private SimpleStringProperty name;
     private List<Attribute> attributes;
     private List<Relation> relations;
     private List<Operation> operations;
-    private Float row;
-    private Float col;
-    private Float width;
-    private Double height;
+    private SimpleFloatProperty row;
+    private SimpleFloatProperty col;
+    private SimpleFloatProperty width;
+    private SimpleDoubleProperty height;
 
 
     public VBoxModel(Box box) {
-        this.name = box.getName();
+        this.name = new SimpleStringProperty(box.getName()) ;
         this.attributes = box.getAttributes();
         this.operations = box.getOperations();
         this.relations = box.getRelations();
-        this.row = box.getRow();
-        this.col = box.getCol();
-        this.width = box.getWidth();
+        this.row = new SimpleFloatProperty(box.getRow());
+        this.col = new SimpleFloatProperty(box.getCol());
+        this.width = new SimpleFloatProperty(box.getWidth());
     }
 
 
     //getters and setters
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = new SimpleStringProperty(name);
     }
 
     public List<Attribute> getAttributes() {
@@ -71,27 +76,27 @@ public class VBoxModel implements Observable {
     }
 
     public double getRow() {
-        return (double) row;
+        return row.doubleValue();
     }
 
     public void setRow(Float row) {
-        this.row = row;
+        this.row = new SimpleFloatProperty(row);
     }
 
     public double getCol() {
-        return (double) col;
+        return col.doubleValue();
     }
 
     public void setCol(Float col) {
-        this.col = col;
+        this.col = new SimpleFloatProperty(col);
     }
 
     public Double getWidth() {
-        return (double) width;
+        return width.doubleValue();
     }
 
     public void setWidth(Float width) {
-        this.width = width;
+        this.width = new SimpleFloatProperty(width);
     }
 
     public List<InvalidationListener> getListenerList() {
@@ -112,7 +117,7 @@ public class VBoxModel implements Observable {
      * Lijst van geregistreerde luisteraars.
      */
     public void setName(Box box) {
-        this.name = box.getName();
+        this.name = new SimpleStringProperty(box.getName());
     }
 
     public void setAttributes(Box box) {
@@ -134,11 +139,11 @@ public class VBoxModel implements Observable {
     }
 
     public Double getHeight() {
-        return height;
+        return height.get();
     }
 
     public void setHeight(Double height) {
-        this.height = height;
+        this.height = new SimpleDoubleProperty(height);
     }
 
     @Override
