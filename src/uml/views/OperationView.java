@@ -1,6 +1,11 @@
-package uml;
+package uml.views;
 
 import javafx.scene.control.Label;
+import uml.FXML.Attribute;
+import uml.FXML.Operation;
+import uml.PageBox;
+import uml.VBoxModel;
+import uml.views.BoxView;
 
 /**
  * Created by sander on 04/04/17.

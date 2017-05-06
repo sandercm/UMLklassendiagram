@@ -9,6 +9,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import uml.FXML.Diagram;
+import uml.FXML.Unmarshaller;
+import uml.views.BoxView;
+import uml.views.RelationView;
 
 import javax.imageio.ImageIO;
 import javax.xml.bind.JAXBException;

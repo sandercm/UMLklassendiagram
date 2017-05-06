@@ -1,4 +1,4 @@
-package uml;
+package uml.FXML;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,14 +10,14 @@ import java.util.List;
 @XmlRootElement
 public class Diagram {
 
-    public List<uml.Box> box;
+    public List<Box> box;
 
     @XmlElement(name = "box")
-    public List<uml.Box> getList() {
+    public List<Box> getList() {
         return box;
     }
 
-    public void setList(List<uml.Box> box) {
+    public void setList(List<Box> box) {
         this.box = box;
     }
 

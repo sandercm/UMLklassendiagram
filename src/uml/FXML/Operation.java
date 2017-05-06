@@ -1,4 +1,6 @@
-package uml;
+package uml.FXML;
+
+import uml.FXML.Attribute;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;

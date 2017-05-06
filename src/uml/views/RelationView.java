@@ -1,4 +1,4 @@
-package uml;
+package uml.views;
 
 
 import javafx.geometry.Point2D;
@@ -7,6 +7,10 @@ import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.Polygon;
+import uml.FXML.Relation;
+import uml.PageBox;
+import uml.PointTuple;
+import uml.VBoxModel;
 
 import java.util.ArrayList;
 import java.util.List;

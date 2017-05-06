@@ -1,4 +1,6 @@
-package uml;
+package uml.FXML;
+
+import uml.FXML.Diagram;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

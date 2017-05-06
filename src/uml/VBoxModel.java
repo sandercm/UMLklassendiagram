@@ -2,6 +2,10 @@ package uml;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import uml.FXML.Attribute;
+import uml.FXML.Box;
+import uml.FXML.Operation;
+import uml.FXML.Relation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +18,7 @@ public class VBoxModel implements Observable {
     //boxes -> relations, attributes and operations
     private String name;
     private List<Attribute> attributes;
-    private List<uml.Relation> relations;
+    private List<Relation> relations;
     private List<Operation> operations;
     private Float row;
     private Float col;
@@ -54,11 +58,11 @@ public class VBoxModel implements Observable {
         return operations;
     }
 
-    public List<uml.Relation> getRelations() {
+    public List<Relation> getRelations() {
         return relations;
     }
 
-    public void setRelations(List<uml.Relation> relations) {
+    public void setRelations(List<Relation> relations) {
         this.relations = relations;
     }
 

@@ -1,8 +1,12 @@
-package uml;
+package uml.views;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
+import uml.FXML.Box;
+import uml.FXML.Diagram;
+import uml.PageBox;
+import uml.VBoxModel;
 
 import java.util.HashMap;
 import java.util.Map;
