@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
@@ -12,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import uml.FXML.Attribute;
 import uml.FXML.Diagram;
 import uml.FXML.Unmarshaller;
 import uml.VBoxModel;
@@ -20,6 +22,7 @@ import uml.views.RelationView;
 
 import javax.imageio.ImageIO;
 import javax.xml.bind.JAXBException;
+import javax.xml.soap.Text;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -115,23 +118,26 @@ public class Companion {
 
 
     @FXML
-    public static void updateName(Label label, VBoxModel model) {
+    public static void updateName(PageBox pageBox) {
+
+
         TextInputDialog inputDialog = new TextInputDialog();
         inputDialog.setHeaderText(null);
         inputDialog.setTitle("new name");
         inputDialog.setContentText("enter new name: ");
         Optional<String> string = inputDialog.showAndWait();
         string.ifPresent(name -> {
-            label.setText(name);
-            model.setName(name);
+            for (Node node: pageBox.getChildren()
+                    ) {
+                if(node instanceof TitleLabel){
+                    ((TitleLabel) node).setText(name);
+                }
+            }
         });
     }
     @FXML
-    static void updateAttributes(Label label, VBoxModel model){
+    static void updateAttributes(PageBox pageBox){
         StringBuilder attribute = new StringBuilder();
-        TextInputDialog inputDialog = new TextInputDialog();
-        inputDialog.setHeaderText(null);
-        inputDialog.setTitle("new attribute");
         List<String> choices = new ArrayList<>();
         choices.add("public");
         choices.add("private");
@@ -142,6 +148,30 @@ public class Companion {
         dialog.setHeaderText(null);
         dialog.setContentText("Choose your scope:");
         Optional<String> result = dialog.showAndWait();
-        result.ifPresent(letter -> System.out.println("Your choice: " + letter));
+        result.ifPresent(letter -> {
+            String vis = BoxView.getVis(letter);
+            attribute.append(vis);
+        });
+        TextInputDialog nameDialog = new TextInputDialog();
+        nameDialog.setHeaderText(null);
+        nameDialog.setTitle("new name");
+        nameDialog.setContentText("Choose your name: ");
+        Optional<String> string = nameDialog.showAndWait();
+        string.ifPresent(name -> attribute.append(name).append(" : "));
+        TextInputDialog typeDialog = new TextInputDialog();
+        typeDialog.setHeaderText(null);
+        typeDialog.setTitle("new type");
+        typeDialog.setContentText("Choose your type: ");
+        Optional<String> type = typeDialog.showAndWait();
+        type.ifPresent(text -> {
+            attribute.append(text).append("\n");
+        });
+        //attributes.append(vis).append(att.getName()).append(" : ").append(att.getType()).append("\n")
+        for (Node node : pageBox.getChildren()
+             ) {
+            if(node instanceof AttributeLabel){
+                ((AttributeLabel) node).setText(((AttributeLabel) node).getText() + attribute);
+            }
+        }
     }
 }

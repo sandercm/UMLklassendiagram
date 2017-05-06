@@ -2,7 +2,6 @@ package uml.views;
 
 import javafx.scene.control.Label;
 import uml.FXML.Attribute;
-import uml.PageBox;
 import uml.VBoxModel;
 
 /**
@@ -34,14 +33,12 @@ public class AttributeView {
 
 
             }
-            Label label = new Label(attributes.toString());
-            label.setOnMouseClicked(event -> Companion.updateAttributes(label, boxModel));
+            AttributeLabel label = new AttributeLabel(attributes.toString());
             label.setId("attributes");
             vBox.getChildren().add(label);
         }
         else{
-            Label label = new Label("");
-            label.setOnMouseClicked(event -> Companion.updateAttributes(label, boxModel));
+            AttributeLabel label = new AttributeLabel("");
             vBox.getChildren().add(label);
             label.setId("attributes");
         }

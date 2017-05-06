@@ -1,7 +1,8 @@
-package uml;
+package uml.views;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import uml.VBoxModel;
 
 /**
  * Created by sander on 01/04/17.

@@ -1,13 +1,9 @@
 package uml.views;
 
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.Separator;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import uml.FXML.Box;
 import uml.FXML.Diagram;
-import uml.PageBox;
 import uml.VBoxModel;
 
 import java.util.HashMap;
@@ -52,18 +48,21 @@ public class BoxView {
             //adds the final operations in the bottom of the vbox
             OperationView operationView = new OperationView(newVbox, model);
             operationView.addOperations();
+            PageBox finalNewVbox = newVbox;
             ContextMenu contextMenu = new ContextMenu();
             MenuItem item1 = new MenuItem("Change Title");
+            item1.setOnAction(event -> Companion.updateName(finalNewVbox));
             MenuItem item2 = new MenuItem("Add Attribute");
+            item2.setOnAction(event -> Companion.updateAttributes(finalNewVbox));
             contextMenu.getItems().addAll(item1, item2);
-            newVbox.setOnContextMenuRequested();
+
+            newVbox.setOnContextMenuRequested(event -> contextMenu.show(finalNewVbox, event.getScreenX(), event.getScreenY()));
             addToPlane(newVbox, model.getRow(), model.getCol());
 
         }
     }
     private void setTitle(PageBox newVbox, VBoxModel model){
-        Label title = new Label(model.getName());
-        title.setOnMouseClicked(event -> Companion.updateName(title, model));
+        TitleLabel title = new TitleLabel(model.getName());
         newVbox.getChildren().add(title);
         title.setPrefWidth(model.getWidth());
         title.setId("topTitle");
