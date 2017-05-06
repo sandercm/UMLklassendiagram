@@ -40,12 +40,12 @@ public class OperationView {
                     attributestring.append(vis).append(opt.getName()).append(" : ").append(opt.getType()).append("\n");
                 }
             }
-            Label label = new Label(attributestring.toString());
+            OperationLabel label = new OperationLabel(attributestring.toString());
             vBox.getChildren().add(label);
             label.setId("operation");
         }
         else {
-            Label label = new Label("");
+            OperationLabel label = new OperationLabel("");
             vBox.getChildren().add(label);
             label.setId("operation");
         }

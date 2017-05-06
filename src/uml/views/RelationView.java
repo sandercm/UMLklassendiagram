@@ -21,12 +21,10 @@ import java.util.List;
 public class RelationView {
     private final AnchorPane anchorpane;
     private final AnchorPane arrowPane;
-    private final AnchorPane headpane;
 
     public RelationView(AnchorPane anchorpane, AnchorPane arrowPane, AnchorPane headpane){
         this.anchorpane = anchorpane;
         this.arrowPane = arrowPane;
-        this.headpane = headpane;
     }
 
 

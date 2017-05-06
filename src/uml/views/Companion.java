@@ -15,6 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import uml.FXML.Attribute;
 import uml.FXML.Diagram;
+import uml.FXML.Operation;
 import uml.FXML.Unmarshaller;
 import uml.VBoxModel;
 import uml.views.BoxView;
@@ -29,6 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 public class Companion {
@@ -173,5 +175,63 @@ public class Companion {
                 ((AttributeLabel) node).setText(((AttributeLabel) node).getText() + attribute);
             }
         }
+    }
+    @FXML
+    static void updateOperations(PageBox pageBox){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Does the operations have sub attributes");
+        alert.setHeaderText(null);
+        alert.setContentText("Choose your option.");
+
+        ButtonType buttonTypeOne = new ButtonType("yes");
+        ButtonType buttonTypeTwo = new ButtonType("no");
+
+        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        result.ifPresent( bool -> {
+            if ("yes".equals(bool.getText())){
+                System.out.println("kek");
+                //TODO:IMPLEMENT THIS CRAP
+            }
+            else if ("no".equals(bool.getText())){
+                StringBuilder operation = new StringBuilder();
+                List<String> choices = new ArrayList<>();
+                choices.add("public");
+                choices.add("private");
+                choices.add("protected");
+                choices.add("package");
+                ChoiceDialog<String> dialog = new ChoiceDialog<>("public", choices);
+                dialog.setTitle("scope");
+                dialog.setHeaderText(null);
+                dialog.setContentText("Choose your scope:");
+                Optional<String> op = dialog.showAndWait();
+                op.ifPresent(letter -> {
+                    String vis = BoxView.getVis(letter);
+                    operation.append(vis);
+                });
+                TextInputDialog nameDialog = new TextInputDialog();
+                nameDialog.setHeaderText(null);
+                nameDialog.setTitle("new name");
+                nameDialog.setContentText("Choose your name: ");
+                Optional<String> string = nameDialog.showAndWait();
+                string.ifPresent(name -> operation.append(name).append(" : "));
+                TextInputDialog typeDialog = new TextInputDialog();
+                typeDialog.setHeaderText(null);
+                typeDialog.setTitle("new type");
+                typeDialog.setContentText("Choose your type: ");
+                Optional<String> type = typeDialog.showAndWait();
+                type.ifPresent(text -> {
+                    operation.append(text).append("\n");
+                });
+                for (Node node : pageBox.getChildren()
+                        ) {
+                    if(node instanceof OperationLabel){
+                        ((OperationLabel) node).setText(((OperationLabel) node).getText() + operation);
+                    }
+                }
+
+            }
+        });
     }
 }

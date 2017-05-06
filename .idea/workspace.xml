@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/uml/views/RelationView.java" line="242" />
+    <bookmark url="file://$PROJECT_DIR$/src/uml/views/RelationView.java" line="240" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uml/views/AttributeLabel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uml/views/TitleLabel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uml/PageBox.java" afterPath="$PROJECT_DIR$/src/uml/views/PageBox.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uml/views/OperationLabel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/views/AttributeView.java" afterPath="$PROJECT_DIR$/src/uml/views/AttributeView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/views/BoxView.java" afterPath="$PROJECT_DIR$/src/uml/views/BoxView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/views/Companion.java" afterPath="$PROJECT_DIR$/src/uml/views/Companion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uml/views/OperationView.java" afterPath="$PROJECT_DIR$/src/uml/views/OperationView.java" />
@@ -81,37 +78,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uml/Main.java">
+      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/uml/views/Companion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="321">
+              <caret line="194" column="42" lean-forward="false" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
               <folding>
-                <marker date="1494093559391" expanded="false" signature="374:385" ph=" { " />
-                <marker date="1494093559391" expanded="false" signature="398:404" ph=" }" />
-                <marker date="1494093559391" expanded="true" signature="481:1554" ph="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VBoxModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uml/VBoxModel.java">
+      <file leaf-file-name="OperationView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uml/views/OperationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="987">
+              <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Companion.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/uml/views/Companion.java">
+      <file leaf-file-name="OperationLabel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uml/views/OperationLabel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+            <state relative-caret-position="525">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,11 +126,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RelationView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uml/views/RelationView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6600">
+              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AttributeLabel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uml/views/AttributeLabel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#209#210#0" expanded="true" />
@@ -172,8 +183,8 @@
       <file leaf-file-name="BoxView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uml/views/BoxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="998">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -186,27 +197,6 @@
               <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uml.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uml/uml.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding>
-                <marker date="1494093559416" expanded="true" signature="482:1500" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="496:1058" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="548:1043" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="584:664" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="723:1020" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="1075:1482" ph="..." />
-                <marker date="1494093559416" expanded="true" signature="1183:1464" ph="..." />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -244,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/UMLloader/UMLVBox.java" />
         <option value="$PROJECT_DIR$/src/oldClasses/BoxController.java" />
         <option value="$PROJECT_DIR$/src/oldClasses/Unmarshal.java" />
         <option value="$PROJECT_DIR$/src/UMLloader/Unmarshal.java" />
@@ -285,15 +274,16 @@
         <option value="$PROJECT_DIR$/src/uml/FXML/Unmarshal.java" />
         <option value="$PROJECT_DIR$/src/uml/FXML/Unmarshaller.java" />
         <option value="$PROJECT_DIR$/src/uml/FXML/Box.java" />
-        <option value="$PROJECT_DIR$/src/uml/views/OperationView.java" />
-        <option value="$PROJECT_DIR$/src/uml/views/RelationView.java" />
         <option value="$PROJECT_DIR$/src/uml/Companion.java" />
         <option value="$PROJECT_DIR$/src/uml/VBoxModel.java" />
         <option value="$PROJECT_DIR$/src/uml/views/PageBox.java" />
-        <option value="$PROJECT_DIR$/src/uml/views/BoxView.java" />
         <option value="$PROJECT_DIR$/src/uml/views/TitleLabel.java" />
         <option value="$PROJECT_DIR$/src/uml/views/AttributeLabel.java" />
         <option value="$PROJECT_DIR$/src/uml/views/AttributeView.java" />
+        <option value="$PROJECT_DIR$/src/uml/views/RelationView.java" />
+        <option value="$PROJECT_DIR$/src/uml/views/OperationLabel.java" />
+        <option value="$PROJECT_DIR$/src/uml/views/OperationView.java" />
+        <option value="$PROJECT_DIR$/src/uml/views/BoxView.java" />
         <option value="$PROJECT_DIR$/src/uml/views/Companion.java" />
       </list>
     </option>
@@ -307,7 +297,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
-    <option name="width" value="2300" />
+    <option name="width" value="2405" />
     <option name="height" value="2110" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1020,13 +1010,6 @@
       <workItem from="1492502202241" duration="604000" />
       <workItem from="1494075121098" duration="10203000" />
     </task>
-    <task id="LOCAL-00003" summary="fixed vbox placement">
-      <created>1490558898084</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1490558898084</updated>
-    </task>
     <task id="LOCAL-00004" summary="fixed vbox placement">
       <created>1490558902261</created>
       <option name="number" value="00004" />
@@ -1363,11 +1346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494077921210</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="added functionaly to add attributes">
+      <created>1494100546994</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1494100546995</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137606000" />
+    <option name="totallyTimeSpent" value="141993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1379,7 +1369,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="2300" height="2110" extended-state="0" />
+    <frame x="-10" y="0" width="2405" height="2110" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1397,7 +1387,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.309482" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29584557" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497805" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1448,7 +1438,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cleaned up and optimised the code" />
     <MESSAGE value="removed unused classes" />
     <MESSAGE value="started work on drawing the arrow" />
     <MESSAGE value="create reltionview and arraylist of the relations" />
@@ -1473,7 +1462,8 @@
     <MESSAGE value="changed line drawings" />
     <MESSAGE value="created arrow class" />
     <MESSAGE value="created packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="created packages" />
+    <MESSAGE value="added functionaly to add attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added functionaly to add attributes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1486,7 +1476,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/UMLloader/Model.java" />
     <entry file="file://$PROJECT_DIR$/src/UMLloader/BoxControllerFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/UMLloader/UMLVBox.java" />
     <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/event/ActionEvent.java" />
@@ -1596,16 +1585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/views/RelationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/uml.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1657,14 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/views/OperationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/FXML/Attribute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1703,10 +1674,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uml/views/AttributeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uml/views/RelationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6600">
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/views/AttributeLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#209#210#0" expanded="true" />
@@ -1717,26 +1706,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uml/views/OperationLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/views/BoxView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="998">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uml/views/AttributeView.java">
+    <entry file="file://$PROJECT_DIR$/src/uml/views/OperationView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="987">
+          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uml/views/Companion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+        <state relative-caret-position="321">
+          <caret line="194" column="42" lean-forward="false" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

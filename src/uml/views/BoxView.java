@@ -54,7 +54,9 @@ public class BoxView {
             item1.setOnAction(event -> Companion.updateName(finalNewVbox));
             MenuItem item2 = new MenuItem("Add Attribute");
             item2.setOnAction(event -> Companion.updateAttributes(finalNewVbox));
-            contextMenu.getItems().addAll(item1, item2);
+            MenuItem item3 = new MenuItem("Add operations");
+            item3.setOnAction(event -> Companion.updateOperations(finalNewVbox));
+            contextMenu.getItems().addAll(item1, item2, item3);
 
             newVbox.setOnContextMenuRequested(event -> contextMenu.show(finalNewVbox, event.getScreenX(), event.getScreenY()));
             addToPlane(newVbox, model.getRow(), model.getCol());
