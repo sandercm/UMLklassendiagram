@@ -1,6 +1,8 @@
 package uml.views;
 
-import javafx.scene.control.*;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import uml.FXML.Box;
 import uml.FXML.Diagram;

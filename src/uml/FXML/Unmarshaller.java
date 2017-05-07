@@ -1,8 +1,5 @@
 package uml.FXML;
 
-import uml.FXML.Diagram;
-import uml.FXML.Unmarshal;
-
 import javax.xml.bind.JAXBException;
 import java.io.File;
 

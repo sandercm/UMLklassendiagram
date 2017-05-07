@@ -1,6 +1,5 @@
 package uml.views;
 
-import javafx.scene.control.Label;
 import uml.FXML.Attribute;
 import uml.FXML.Operation;
 import uml.VBoxModel;

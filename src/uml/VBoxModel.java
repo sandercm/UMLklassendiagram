@@ -5,8 +5,6 @@ import javafx.beans.Observable;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableStringValue;
-import sun.java2d.pipe.SpanShapeRenderer;
 import uml.FXML.Attribute;
 import uml.FXML.Box;
 import uml.FXML.Operation;

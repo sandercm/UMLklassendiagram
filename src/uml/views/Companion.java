@@ -1,36 +1,30 @@
 package uml.views;
 
-import com.sun.javafx.scene.control.skin.LabeledText;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ChoiceDialog;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.WritableImage;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
-import uml.FXML.Attribute;
 import uml.FXML.Diagram;
-import uml.FXML.Operation;
 import uml.FXML.Unmarshaller;
-import uml.VBoxModel;
-import uml.views.BoxView;
-import uml.views.RelationView;
 
 import javax.imageio.ImageIO;
 import javax.xml.bind.JAXBException;
-import javax.xml.soap.Text;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 public class Companion {
